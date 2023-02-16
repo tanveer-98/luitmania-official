@@ -1,0 +1,145 @@
+@tailwind base; 
+@tailwind components;
+@tailwind utilities;
+
+body{
+  overflow-x: hidden;
+}
+@media (min-width: 1020px){
+    .bg-hero{
+        width: 2000px;
+        height : 300px; 
+        left : 30% ; 
+        @apply absolute rounded-l-full top-52 bg-softBlue;
+    }
+    .bg-tabs{
+        width: 2000px; 
+        height: 300px ; 
+        right : 60% ; 
+        @apply absolute rounded-r-full top-60 bg-softBlue
+    }
+}
+
+.active{
+    @apply border-b-4 border-softRed
+}
+
+@mixin shrinklabel{
+    top:-14px;
+    font-size:12px; 
+    color : white;
+}
+
+.hamburger{
+    cursor:pointer;
+    width: 24px; 
+    height: 24px ; 
+    transition : all 0.25s; 
+    position:relative;
+}
+.hamburger-top,
+.hamburger-middle , 
+.hamburger-bottom{
+    content : "";
+    position : absolute;
+    width: 24px ; 
+    height : 3px ; 
+    top:0; 
+    right : 0 ; 
+    background: #000;
+    transform : rotate(0);
+    transition : all 0.5s; 
+    border-radius: 30px;
+}
+.hamburger-middle{
+    transform : translateY(7px);
+   
+}
+.hamburger-bottom {
+    transform : translateY(14px);
+    background:#000;
+}
+.open .hamburger-middle{
+ display: none ; 
+}
+.open .hamburger-top{
+    transform : rotate(45deg) translateY(7px) translateX(7px);
+ }
+ .open .hamburger-bottom{
+    transform : rotate(-45deg) translateY(7px) translateX(-8px);
+
+ }
+
+ /* .newsletter{
+    position:relative; 
+
+ }
+ .newsletter::before{
+    content: "Enter Email";
+    position: absolute;
+    top:14px ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    left : 10px; 
+ }
+ /* .newsletter */
+
+ /* .newsletter input[type="text"]:active {
+
+   
+ } */
+
+ .groupInp{
+    position:relative; 
+    margin : 0px 5px; 
+}
+
+
+.groupInp .form-input{
+    background : none; 
+    background-color : white; 
+    color : black; 
+    font-size: 18px ; 
+    padding : 10px 10px 10px 5px; 
+    display: block; 
+    border-radius: 30px;
+    width: 100%; 
+    border: none; 
+    /* border-radius : 0;  */
+    border-bottom : 1px solid grey;
+    /* margin :25px 0;  */
+}
+
+.groupInp .form-input:focus{
+    outline :none ;
+}
+.groupInp .form-input:focus ~ .form-input-label{
+    top: -30px;
+    font-size: 12px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.form-input-label{
+    color : grey;
+    font-size:16px; 
+    font-weight: normal; 
+    position: absolute;
+    pointer-events: none;
+    left: 14px;
+    top: 10px;
+    transition: 300ms ease all;
+
+}
+
+.form-input-label.shrink{
+    top: -30px;
+    font-size: 12px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0;
+}
+
+.nav-link a{
+    display: block ;
+    padding : 2rem 0 ;
+}
