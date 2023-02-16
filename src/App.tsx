@@ -12,7 +12,7 @@ import Projects from "./components/projects";
 import Contact from "./components/Contact/contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-
+import AnimatedBG from "./components/AnimatedBG";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -46,7 +46,9 @@ function App() {
     <>
       <Navbar />
 
-      <Hero />
+      <AnimatedBG/>
+     
+      {/* <Hero /> */}
 
       <AboutUs />
 
