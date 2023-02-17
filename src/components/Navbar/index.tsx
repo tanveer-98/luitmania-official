@@ -26,16 +26,15 @@ const Navbar = () => {
   }
   window.addEventListener("scroll", check);
 
-
   return (
     <nav
-      className={`fixed opacity-80  transition-all duration-300 ease-linear z-20 ${
-        scrollReached ? "bg-veryDarkBlue" : "bg-bodyColorMain"
+      className={`fixed top-0 backdrop-blur-lg  transition-all duration-300 ease-linear z-20 ${
+        scrollReached ? "bg-bodyColorMain" : "bg-transparent"
       } w-full mx-auto px-1`}
     >
       {/* <!-- Flex container for nav items --> */}
 
-      <div className="hidden md:flex items-center justify-around space-x-20 my-6">
+      <div className="hidden md:flex items-center justify-around space-x-20 py-2">
         {/* <!-- logo --> */}
         <div className="z-30">
           <img
@@ -55,7 +54,7 @@ const Navbar = () => {
             to="hero"
             smooth={true}
             offset={0}
-            className="  tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-white  cursor-pointer"
           >
             Home
           </Link>
@@ -63,7 +62,7 @@ const Navbar = () => {
             to="aboutus"
             smooth={true}
             offset={-120}
-            className="  tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-white cursor-pointer"
           >
             About us
           </Link>
@@ -71,7 +70,7 @@ const Navbar = () => {
             to="services"
             smooth={true}
             offset={-120}
-            className="  tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-white cursor-pointer"
           >
             Services
           </Link>
@@ -79,7 +78,7 @@ const Navbar = () => {
             to="projects"
             smooth={true}
             offset={-120}
-            className="  tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-white cursor-pointer"
           >
             Projects
           </Link>
@@ -87,27 +86,30 @@ const Navbar = () => {
             to="faq"
             smooth={true}
             offset={-120}
-            className="  tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-white cursor-pointer"
           >
             FAQ
           </Link>
-
-          <Link
-            to="newsletter"
-            smooth={true}
-            offset={-120}
-            className="  tracking-tight hover:text-softRed cursor-pointer"
-          >
-            NewsLetter
-          </Link>
-          <Link
-            to="contactus"
-            smooth={true}
-            offset={-80}
-            className="  tracking-tight hover:text-softRed cursor-pointer"
-          >
-            Contact Us
-          </Link>
+          <div>
+            <Link
+              to="newsletter"
+              smooth={true}
+              offset={-120}
+              className="  tracking-tight  hover:text-white cursor-pointer"
+            >
+              NewsLetter
+            </Link>
+          </div>
+          <div className="contact-button flex justify-center items-center">
+            <Link
+              to="contactus"
+              smooth={true}
+              offset={-80}
+              className=" tracking-tight hover:text-white cursor-pointer"
+            >
+              Contact Us
+            </Link>
+          </div>
 
           {/* <a
               href=""
@@ -120,10 +122,14 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className={`burger-animate md:hidden w-full py-3 text-center flex ${open?"justify-start": "justify-end b-animate-start"}`}>
+      <div
+        className={`burger-animate md:hidden w-full py-3 text-center flex ${
+          open ? "justify-start" : "justify-end b-animate-start"
+        }`}
+      >
         <button
           id="menu-btn"
-          className={`bg-[#424242] rounded-md z-30 inline-block ml-[3%] md:hidden focus:outline-none hamburger  ${
+          className={`bg-[#424242] p-2 rounded-md z-30 inline-block ml-[3%] md:hidden focus:outline-none hamburger  ${
             open ? "open" : ""
           }`}
           onClick={toggleHam}
@@ -146,7 +152,6 @@ const Navbar = () => {
          mobile-nav
         `}
       >
-        
         <div className="mobile-nav-link w-full py-3 text-left pl-2  font-bold">
           <Link
             to="hero"
@@ -191,7 +196,7 @@ const Navbar = () => {
             Projects
           </Link>
         </div>{" "}
-        <div className="mobile-nav-link  w-full py-3 text-left pl-2 hover:text-blue-500">
+        <div className="mobile-nav-link  w-full py-3 text-left pl-2 ">
           <Link
             to="faq"
             smooth={true}

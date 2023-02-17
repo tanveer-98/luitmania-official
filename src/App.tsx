@@ -47,10 +47,10 @@ function App() {
       <Navbar />
 
     
-      {/* <div className="absolute h-full top-10 left-0"> */}
+     
 
       <AnimatedBG/>
-      {/* </div> */}
+     
       {/* <Hero /> */}
 
     

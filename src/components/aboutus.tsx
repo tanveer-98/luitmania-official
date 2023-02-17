@@ -55,8 +55,8 @@ const AboutUs = () => {
 
   }
   return (
-    <section id="aboutus">
-      <div className=" mx-auto mt-16 px-6 md:mx-0">
+    <section id="aboutus" className="bg-black">
+      <div className="mx-auto my-16 px-6 md:mx-0">
         {/* <h2 className="mb-6 text-4xl font-semibold text-center">About Us</h2> */}
         <Heading/>
         <P1/>
