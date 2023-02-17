@@ -25,9 +25,11 @@ const Navbar = () => {
     } else setScrollReached(false);
   }
   window.addEventListener("scroll", check);
+
+
   return (
     <nav
-      className={`fixed  transition-all duration-300 ease-linear z-20 ${
+      className={`fixed opacity-80  transition-all duration-300 ease-linear z-20 ${
         scrollReached ? "bg-veryDarkBlue" : "bg-bodyColorMain"
       } w-full mx-auto px-1`}
     >
@@ -53,7 +55,7 @@ const Navbar = () => {
             to="hero"
             smooth={true}
             offset={0}
-            className="tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-softRed cursor-pointer"
           >
             Home
           </Link>
@@ -61,7 +63,7 @@ const Navbar = () => {
             to="aboutus"
             smooth={true}
             offset={-120}
-            className="tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-softRed cursor-pointer"
           >
             About us
           </Link>
@@ -69,7 +71,7 @@ const Navbar = () => {
             to="services"
             smooth={true}
             offset={-120}
-            className="tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-softRed cursor-pointer"
           >
             Services
           </Link>
@@ -77,7 +79,7 @@ const Navbar = () => {
             to="projects"
             smooth={true}
             offset={-120}
-            className="tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-softRed cursor-pointer"
           >
             Projects
           </Link>
@@ -85,7 +87,7 @@ const Navbar = () => {
             to="faq"
             smooth={true}
             offset={-120}
-            className="tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-softRed cursor-pointer"
           >
             FAQ
           </Link>
@@ -94,7 +96,7 @@ const Navbar = () => {
             to="newsletter"
             smooth={true}
             offset={-120}
-            className="tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-softRed cursor-pointer"
           >
             NewsLetter
           </Link>
@@ -102,7 +104,7 @@ const Navbar = () => {
             to="contactus"
             smooth={true}
             offset={-80}
-            className="tracking-tight hover:text-softRed cursor-pointer"
+            className="  tracking-tight hover:text-softRed cursor-pointer"
           >
             Contact Us
           </Link>
@@ -138,70 +140,70 @@ const Navbar = () => {
         id="menu"
         className={`${
           open ? "mobile_open" : "mobile_close"
-        } fixed inset-0 z-20 flex flex-col items-center self-end
-        w-[70%] h-full min-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase
-        divide-y divide-gray-500  bg-[#303030] mobile-nav
-        
+        } md:hidden fixed inset-0 z-20 flex flex-col items-center self-end
+        w-full h-full min-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase
+        divide-y divide-gray-500  bg-[#303030] 
+         mobile-nav
         `}
       >
         
-        <div className="w-full py-3 text-left pl-2 hover:text-blue-500 font-bold">
+        <div className="mobile-nav-link w-full py-3 text-left pl-2  font-bold">
           <Link
             to="hero"
             smooth={true}
             offset={-120}
             onClick={toggleHam}
-            className="tracking-tight hover:text-softRed"
+            className="  tracking-tight "
           >
             Home
           </Link>
         </div>
-        <div className=" w-full py-3 text-left pl-2 hover:text-blue-500">
+        <div className=" mobile-nav-link  w-full py-3 text-left pl-2 ">
           <Link
             to="aboutus"
             smooth={true}
             offset={-120}
             onClick={toggleHam}
-            className="tracking-tight hover:text-softRed"
+            className="  tracking-tight "
           >
             About Us
           </Link>
         </div>{" "}
-        <div className="w-full py-3 text-left pl-2  hover:text-blue-500">
+        <div className="mobile-nav-link  w-full py-3 text-left pl-2  ">
           <Link
             to="services"
             smooth={true}
             onClick={toggleHam}
             offset={-120}
-            className="tracking-tight hover:text-softRed"
+            className="  tracking-tight "
           >
             Services
           </Link>
         </div>{" "}
-        <div className="w-full py-3 text-left pl-2 hover:text-blue-500 hover:shadow-blue-500">
+        <div className="mobile-nav-link  w-full py-3 text-left pl-2  ">
           <Link
             to="projects"
             smooth={true}
             onClick={toggleHam}
             offset={-120}
-            className="tracking-tight hover:text-softRed"
+            className="  tracking-tight"
           >
             Projects
           </Link>
         </div>{" "}
-        <div className="w-full py-3 text-left pl-2 hover:text-blue-500">
+        <div className="mobile-nav-link  w-full py-3 text-left pl-2 hover:text-blue-500">
           <Link
             to="faq"
             smooth={true}
             onClick={toggleHam}
             offset={-120}
-            className="tracking-tight hover:text-softRed block"
+            className="  tracking-tight  block"
           >
             FAQ
           </Link>
         </div>
         <div
-          className="w-full py-3 text-left pl-2 hover:text-blue-500"
+          className="mobile-nav-link w-full py-3 text-left pl-2 "
           onClick={toggleHam}
         >
           <Link
@@ -209,18 +211,18 @@ const Navbar = () => {
             smooth={true}
             onClick={toggleHam}
             offset={-120}
-            className="tracking-tight block hover:text-softRed w-full"
+            className="  tracking-tight block w-full"
           >
             NewsLetter
           </Link>
         </div>
-        <div className="w-full py-3 text-left pl-2 hover:text-blue-500">
+        <div className="mobile-nav-link  w-full py-3 text-left pl-2 ">
           <Link
             to="contactus"
             onClick={toggleHam}
             smooth={true}
             offset={-120}
-            className="tracking-tight hover:text-softRed"
+            className="  tracking-tight "
           >
             Contact Us
           </Link>

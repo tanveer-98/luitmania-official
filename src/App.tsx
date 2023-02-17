@@ -43,12 +43,18 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div >
       <Navbar />
 
+    
+      {/* <div className="absolute h-full top-10 left-0"> */}
+
       <AnimatedBG/>
-     
+      {/* </div> */}
       {/* <Hero /> */}
+
+    
+     
 
       <AboutUs />
 
@@ -63,7 +69,7 @@ function App() {
       <div className="w-full "><Contact /></div>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -1,11 +1,18 @@
-
+.a_hero{
+ position : relative;
+}
 .wrapper {
   position: relative;
+  padding-top: 15%;
   width: 100%;
   height: 700px;
   overflow: hidden;
   background: linear-gradient(90deg, #1d1d1d 0%, #424242 100%);
   /* background: linear-gradient(#e66465, #9198e5); */
+}
+.wrapper-hero{
+  position: absolute ; 
+
 }
 
 .wrapper__h2 {
