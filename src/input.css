@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alata&family=Comfortaa:wght@400;700&family=Gemunu+Libre:wght@400;700&family=Josefin+Sans:wght@400;700&family=Lato:wght@300;400;700;900&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
-
 /* *,
 ::before,
 ::after {
@@ -12,7 +10,27 @@
   padding: 0px;
 } */
 
-  
+
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Alata', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Gemunu Libre', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Varela Round', sans-serif;
+   */
+
+@font-face{
+  font-family: Rosmatica;
+  src: url('./assets/rosmatika-font/RosmatikaRegular-BWA45.ttf');
+}
+.logo{
+  font-family: 'Rosmatica','sans-serif';
+}
 
 :root{
   --primary-light : '#ffffff'
@@ -20,10 +38,66 @@
   --title-font: 'Raleway', Arial, sans-serif;
   --meta-font: 'Raleway', Arial, sans-serif;
   --text-font: 'Raleway', Arial, sans-serif;
+  --main-logo-text-color: #d4d4d4;
+    --all-link-color: rgba(255,255,255,.7);
+    --body-color-main: #292929;
+    --main-menu: #383838;
+    --text-font-color: #d3d3d3;
+    --shadow-top: none;
+    --cloud-border-color: rgb(100 100 100 / 0.66);
+    --cloud-bg-color: #ffffff;
+    --koOiIliI-sypemenu-bg: #212121;
+    --input-form: rgb(112 112 112 / 0.34);
+    --shadow-top-fixed: none;
+    --white-label-color: #464646;
+    --main-menu-text-color: #dadada;
+    --search-bt-text: #b5b5b5;
+    --sub-menu-text-color: #dadada;
+    --title-share: #dddddd;
+    --black-color: #d9d9d9;
+    --title-share-fa: #dddddd;
+    --front-bg-lists: #292929;
+    --box-shadows: transparent;
+    --bt-home: #212121;
+    --sticky-lists: #212121;
+    --main-menu-bg: #232323;
+    --post-snip-open: #eee;
+    --paint-cards: #292929;
+    --footer-gadgets-title: #c3c3c3;
+    --footer-title-color: #adadad;
+    --sticky-bg: #212121;
+    --placeholder-text-color: #dadada;
+    --theme-text-color: #dadada;
+    --featured-gadgets-title: #dadada;
+    --ads-bg: #212121;
+    --color-section: #1d1d1d;
+    --color-section1: #424242;
+    --footer-copyright-bg: #181818;
+    --box-posts-share: #323232;
+    --submenu-bg-color: #212121;
+    --label-text-color: #a1a1a1;
+    --featured-posts-title: #c3c3c3;
+    --ads-text: #dadada;
+    --buttons-category-text: #dadada;
+    --bg-cards: #212121;
+    --block-bg: #3a3a3a;
+    --black-text: #f3f8fb;
+    --post-snip-data: #a5a5a5;
+    --comments-dec: #cecece;
+    --comment-content: #353535;
+    --comment-text: #c1c1c1;
+    --footer-bg-color: #181818;
+    --footer-text-color: #E4E4E4;
+    --cm-count: #E4E4E4;
+    --main-text-color: #E4E4E4;
+    --koOiIliI-nav-text: #c3c3c3;
+    --share-author-links: #E4E4E4;
+    --footer-copyright-bg: #292929;
 }
+
 body {
   overflow-x: hidden;
-  font-family: var(--body-font);
+  font-family: 'Varela Round', sans-serif;
 }
 @media (min-width: 1020px) {
   .bg-hero {

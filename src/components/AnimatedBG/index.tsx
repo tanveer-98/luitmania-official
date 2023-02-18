@@ -32,7 +32,7 @@ const AnimatedHero = () => {
           Bringing Your Technological Needs at Affordable Price
 
             </h2>
-            <p className="text-xl text-center  md:text-left md:text-2xl tracking-tighter mt-2">
+            <p className="text-xl text-center  md:text-left md:text-2xl tracking-tighter mt-6">
             An enthusiastic web application products team building products for clients at a affordable price with great features and support.
             </p>
             <div className="w-full flex justify-center md:justify-start items-center mt-10">

@@ -167,7 +167,7 @@ const Faq = () => {
   }
   return (
     <>
-         <section id="faq">
+         <section id="faq" className="">
         <div className="container mx-auto mt-20 ">
          <Heading/>
          <P1/>

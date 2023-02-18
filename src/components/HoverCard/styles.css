@@ -1,0 +1,86 @@
+.hovercard_container{
+ position:absolute;
+ top : 0; 
+ bottom : 0;
+ left : 0 ; 
+ right : 0;
+ display: flex ; 
+ align-items:center;
+ justify-content : center;
+ flex-wrap: wrap;
+ padding: 30px;
+
+}
+.hovercard_card{
+    /* background-color: black; */
+    position : relative;
+    max-width:300px;
+    height:215px;
+    background-color: #fff;
+    margin : 30px 10px ; 
+    padding : 20px 15px ; 
+
+    display : flex; 
+    flex-direction: column;
+
+    box-shadow: 0 5px 20px 
+    rgba(0,0,0,0.5);
+
+    transition: 0.3s ease-in-out; 
+    border-radius : 15px; 
+}
+/* .hovercard_card:hover{
+    height:340px;
+} */
+
+.hovercard_image{
+    position: relative ;
+    width: 260px;
+    height: 260px;
+    top : -40%;
+    left : 8px;
+    box-shadow  : 0 5px 20px 
+    rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 50px;
+    /* background-color: black; */
+}
+
+.hovercard_image_img{
+    border-radius : 50px;
+    max-width: 100%;
+}
+
+.hovercard_content_content{
+    position : relative;
+    top : -140px;
+    padding : 10px 15px;
+    color : #111;
+    text-align : center;
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+}
+
+.hovercard_card:hover .hovercard_content_content{
+    margin-top : 30px ;
+    visibility:visible ;
+    opacity :1;
+    transition-delay: 0.2s;
+}
+
+.hovercard_content h3{
+    font-family: 'raleway';
+    visibility: visible;
+    opacity: 1;
+}
+
+.hovercard_content_container .button_container{
+    position:relative;
+    top: -60px
+}
+
+
+.hovercard_viewmore:hover .hovercard_card{
+    height: 340px;
+}

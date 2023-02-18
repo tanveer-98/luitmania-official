@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import Logo from '../../assets/luitomania.png'
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrollReached, setScrollReached] = useState(false);
@@ -28,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 backdrop-blur-lg  transition-all duration-300 ease-linear z-20 ${
+      className={`fixed py-2 top-0 backdrop-blur-lg  transition-all duration-300 ease-linear z-20 ${
         scrollReached ? "bg-bodyColorMain" : "bg-transparent"
       } w-full mx-auto px-1`}
     >
@@ -37,12 +38,16 @@ const Navbar = () => {
       <div className="hidden md:flex items-center justify-around space-x-20 py-2">
         {/* <!-- logo --> */}
         <div className="z-30">
-          <img
-            src="luitmania-logo.png"
+          {/* <img
+            src={L}
             alt=""
             id="logo"
             className="w-[200px] "
-          />
+          /> */}
+         <h2 className= " logo text-white ml-6 tracking-widest text-3xl text-center">
+
+          LuitoMania
+         </h2>
         </div>
         {/* <!-- Menu Items --> */}
         <div

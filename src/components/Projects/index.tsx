@@ -29,7 +29,7 @@ const Projects = () => {
             }
         },[controls, inView]);
         return <motion.h2
-        className='mb-6 text-3xl font-semibold text-center md:text-4xl'
+        className='mb-6 text-white text-3xl font-semibold text-center md:text-4xl'
         ref = {ref}
         initial ='hidden'
         animate = {controls}
@@ -49,16 +49,16 @@ const Projects = () => {
         },[controls, inView]);
 
         return <motion.div
-        className ="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
+        className =" bg-mainMenu flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
         ref = {refSquare1}
         initial ="hidden"
         animate = {controls}
         variants = {square1Variants}
         >
             <div className="flex justify-center">
-              <img src="/apexsite.png" alt="Apex site" />
+              <img src="/apexsite.png" alt="Apex Design & Construction" />
             </div>
-            <h5 className="pt-6 text-xl font-bold">Apex Design & Construction</h5>
+            <h5 className="pt-6 text-xl text-white  font-bold">Apex Design & Construction</h5>
             <p className="text-gray-400"> WebSite for Design & Construction Site</p>
             {/* Dots */}
             <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
@@ -81,7 +81,7 @@ const Projects = () => {
       },[controls, inView]);
 
       return <motion.div
-      className ="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
+      className ="bg-mainMenu flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
       ref = {refSquare1}
       initial ="hidden"
       animate = {controls}
@@ -90,7 +90,7 @@ const Projects = () => {
           <div className="flex justify-center">
             <img src="/apexsite.png" alt="Chrome Image" />
           </div>
-          <h5 className="pt-6 text-xl font-bold">Ganasuraksha Party Site</h5>
+          <h5 className="pt-6 text-xl font-bold text-white">Ganasuraksha Party Site</h5>
           <p className="text-gray-400"> WebSite for Political Party</p>
           {/* Dots */}
           <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
@@ -138,7 +138,7 @@ const Projects = () => {
 
     }
   return (
-    <section id="projects" className='mt-20'>
+    <section id="projects" className='py-16 bg-bodyColorMain'>
         <div className="container mx-auto font-semibold text-center md:text-4xl">
           <Heading/>
         </div>

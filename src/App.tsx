@@ -4,15 +4,16 @@ import Arrow from "./assets/icon-arrow.svg";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Hero from "./components/hero";
-import AboutUs from "./components/aboutus";
-import Team from "./components/ourteam";
+import AboutUs from "./components/AboutUs";
+import Team from "./components/OurTeam";
 import NewsLetter from "./components/newsletter";
-import Faq from "./components/faq";
-import Projects from "./components/projects";
+import Faq from "./components/FAQ";
+import Projects from "./components/Projects";
 import Contact from "./components/Contact/contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import AnimatedBG from "./components/AnimatedBG";
+import HoverCard from "./components/HoverCard";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -43,30 +44,31 @@ function App() {
   }, []);
 
   return (
-    <div >
+    <div>
       <Navbar />
 
-    
-     
+      <AnimatedBG />
 
-      <AnimatedBG/>
-     
       {/* <Hero /> */}
-
-    
-     
 
       <AboutUs />
 
       <Team />
 
-
       <Projects />
+
+
+      <div className="relative w-full h-[600px] flex justify-center items-center">
+        <HoverCard />
+      </div>
+      
       <Faq />
 
       <NewsLetter />
 
-      <div className="w-full "><Contact /></div>
+      <div className="w-full ">
+        <Contact />
+      </div>
 
       <Footer />
     </div>

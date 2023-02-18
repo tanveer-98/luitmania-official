@@ -21,7 +21,7 @@ const AboutUs = () => {
     }, [controls, inView]);
     return (
       <motion.h2
-        className="mb-6 text-4xl font-semibold text-center"
+        className="mb-6 text-4xl font-semibold text-center text-white"
         ref={refHeading}
         initial="hidden"
         animate={controls}
@@ -55,8 +55,8 @@ const AboutUs = () => {
 
   }
   return (
-    <section id="aboutus" className="bg-black">
-      <div className="mx-auto my-16 px-6 md:mx-0">
+    <section id="aboutus" className="bg-bodyColorMain">
+      <div className="mx-auto  py-12 md:mx-0">
         {/* <h2 className="mb-6 text-4xl font-semibold text-center">About Us</h2> */}
         <Heading/>
         <P1/>
