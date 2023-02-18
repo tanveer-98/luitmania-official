@@ -4,7 +4,7 @@ import {Link} from 'react-scroll'
 import Wave from '../CssWave'
 // import Art from '../../assets/'
 import character from '../../assets/character.png'
-import NeonButton from '../buttons/neonbutton'
+import NeonButton from '../Neonbutton/neonbutton'
 const AnimatedHero = () => {
   return (
     <div id="Ahero" className="a_hero">

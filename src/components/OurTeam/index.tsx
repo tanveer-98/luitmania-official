@@ -69,7 +69,7 @@ const Team = () => {
 
     return (
       <motion.div
-        className="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
+        className="bg-bodyColorMain flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
         ref={refSquare1}
         initial="hidden"
         animate={controls}
@@ -78,7 +78,7 @@ const Team = () => {
         {/* <div className="flex justify-center">
               <img src="src/tanveer.webp" alt="Chrome Image" />
             </div> */}
-        <h5 className="pt-6 text-xl font-bold">Bishwaraj Paul</h5>
+        <h5 className="text-white  pt-6 text-xl font-bold">Bishwaraj Paul</h5>
         <p className="text-gray-400"> SDE at Brillio</p>
         {/* Dots */}
         <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
@@ -120,7 +120,7 @@ const Team = () => {
 
     return (
       <motion.div
-        className=" bg-mainMenu flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
+        className=" bg-bodyColorMain flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
         ref={refSquare1}
         initial="hidden"
         animate={controls}
@@ -129,7 +129,7 @@ const Team = () => {
         {/* <div className="flex justify-center">
             <img src="/tanveer.webp" alt="Chrome Image" />
           </div> */}
-        <h5 className="pt-6 text-xl font-bold">Chinmoy Talukdar</h5>
+        <h5 className="text-white pt-6 text-xl font-bold">Chinmoy Talukdar</h5>
         <p className="text-gray-400"> SDE at is Sapient</p>
         {/* Dots */}
         <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
@@ -180,7 +180,7 @@ const Team = () => {
         {/* <div className="flex justify-center">
             <img src="/tanveer.webp" alt="Chrome Image" />
           </div> */}
-        <h5 className="pt-6 text-xl font-bold">Tanveer Ahmed</h5>
+        <h5 className="text-white pt-6 text-xl font-bold">Tanveer Ahmed</h5>
         <p className="text-gray-400"> SDE at Brillio</p>
         {/* Dots */}
         <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">

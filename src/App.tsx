@@ -57,10 +57,6 @@ function App() {
 
       <Projects />
 
-
-      <div className="relative w-full h-[600px] flex justify-center items-center">
-        <HoverCard />
-      </div>
       
       <Faq />
 

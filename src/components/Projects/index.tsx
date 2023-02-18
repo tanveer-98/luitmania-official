@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import HoverCard from '../HoverCard';
 const Projects = () => {
      const headingVariants = {
       visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1  } },
@@ -49,26 +50,20 @@ const Projects = () => {
         },[controls, inView]);
 
         return <motion.div
-        className =" bg-mainMenu flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
+        className =" relative flex flex-col w-full h-[400px] space-y-16 text-center rounded-lg  md:w-1/3"
         ref = {refSquare1}
         initial ="hidden"
         animate = {controls}
         variants = {square1Variants}
         >
-            <div className="flex justify-center">
-              <img src="/apexsite.png" alt="Apex Design & Construction" />
-            </div>
-            <h5 className="pt-6 text-xl text-white  font-bold">Apex Design & Construction</h5>
-            <p className="text-gray-400"> WebSite for Design & Construction Site</p>
-            {/* Dots */}
-            <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">
-              <a
-                href="https://www.apexconst.in"
-                className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-softBlue hover:text-softBlue hover:bg-white border-softBlue"
-              >
-                Visit Site
-              </a>
-            </div>
+            
+            <HoverCard
+             title ="Apex Design & Construction"
+             imageUrl="/apexsite.png"
+             content = "WebSite for Design & Construction Site"
+             url="https://www.apexconst.in"
+            
+            />
         </motion.div>
     }
     function Square2 () {
@@ -138,17 +133,21 @@ const Projects = () => {
 
     }
   return (
-    <section id="projects" className='py-16 bg-bodyColorMain'>
+    <section id="projects" className='py-16 bg-bodyColorMain '>
         <div className="container mx-auto font-semibold text-center md:text-4xl">
           <Heading/>
         </div>
         {/* Boxes Container */}
-        <div className="relative flex flex-col items-center max-w-5xl mx-auto space-y-10 px-10 md:px-6 md:space-y-0 md:space-x-7 md:flex-row">
-          {/* Box 1 */}
+        <div className="relative mt-12 md:mt-5 flex-wrap flex flex-col items-center max-w-6xl mx-auto  px-10   md:flex-row">
           
-            <Square1/>
-            <Square2/>
-            {/* <Square3/> */}
+            
+         <Square1/>
+         <Square1/>
+         <Square1/>
+         <Square1/>
+         <Square1/>
+         <Square1/>
+
           
         </div>
       </section>
