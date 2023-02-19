@@ -50,7 +50,7 @@ const Projects = () => {
     content : string ; 
     styles: string ; 
   }
-  function Heading({content,styles}:IHeading){
+   function Heading({content,styles}:IHeading){
     const controls = useAnimation();
     const [ref, inView] = useInView();
     useEffect(() => {
@@ -118,8 +118,8 @@ const Projects = () => {
         />
     
       <Heading 
-        styles=" sub-title mb-6 text-[color:var(--main-text-color)] text-xl text-center md:text-2xl"
-         content="projects"
+        styles=" px-10 sub-title mb-6 text-[color:var(--main-text-color)] text-xl text-center md:text-[16px]"
+         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         />
   
       {/* Boxes Container */}

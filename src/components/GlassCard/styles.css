@@ -1,0 +1,44 @@
+.glasscard div .image-container img{
+    height:80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.glasscard div .image-container{
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,50,50,0.08);
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 6px 3px rgb(33 33 33 / 6%);
+}
+.glasscard div .image-container:hover{
+    background-color:rgba(255,50,50,0.07);
+    border-radius: 50%; 
+    /* opacity:0.8; */
+}
+.glasscard{
+  box-shadow:0px 0px 5px #ffffff;
+  /* backdrop-filter: blur(10px); */
+  background: rgba(37, 37, 37, 0.3);
+  border-radius: 14px;
+  margin:10px;
+}
+
+
+/* .glasscard div h3{
+
+    color : white;
+
+
+} */
+
+/* .glasscard div ~ p{
+    margin : 0 4rem;
+    text-align: center;
+    font-size : 0.5rem;
+    color:white;
+
+} */

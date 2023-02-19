@@ -14,6 +14,10 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import AnimatedBG from "./components/AnimatedBG";
 import HoverCard from "./components/HoverCard";
+import Services from "./components/Services"
+
+
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -51,6 +55,8 @@ function App() {
 
       {/* <Hero /> */}
 
+      <Services/>
+      
       <AboutUs />
 
       <Team />
