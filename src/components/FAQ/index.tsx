@@ -23,7 +23,7 @@ const Faq = () => {
     }, [controls, inView]);
     return (
       <motion.h2
-        className="mb-6 text-3xl font-semibold text-center md:text-4xl"
+        className="pb-6 text-3xl text-white font-semibold text-center md:text-4xl"
         ref={refHeading}
         initial="hidden"
         animate={controls}
@@ -66,7 +66,7 @@ const Faq = () => {
     }, [controls, inView]);
     return (
       <motion.div
-        className="container mx-auto px-6 mb-32"
+        className="container mx-auto px-6 "
         ref={refHeading}
         initial="hidden"
         animate={controls}
@@ -75,7 +75,7 @@ const Faq = () => {
         
           {/* Accordion Container */}
 
-          <div className="max-w-2xl m-8 mx-auto overflow-hidden">
+          <div className="max-w-2xl pb-24 mx-auto overflow-hidden">
             <div className="py-1 border-b outline-none group" tabIndex={1}>
               {/* Tab Flex Container  */}
               <div
@@ -167,13 +167,13 @@ const Faq = () => {
   }
   return (
     <>
-         <section id="faq" className="">
-        <div className="container mx-auto mt-20 ">
+         <section id="faq" className="bg-mainMenu py-12">
+        <div className="container mx-auto  ">
          <Heading/>
          <P1/>
         </div>
       </section>
-      <section id="faq-accordion">
+      <section id="faq-accordion" className="bg-mainMenu">
         {/* Main Container */}
 
         <FAQSection/>

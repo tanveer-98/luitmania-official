@@ -22,7 +22,7 @@ const NewsLetter = () => {
     }, [controls, inView]);
     return (
       <motion.div
-        className="max-w-lg mx-auto py-24 mt-20"
+        className="max-w-lg mx-auto py-24 "
         ref={ref}
         initial="hidden"
         animate={controls}
