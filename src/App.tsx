@@ -63,8 +63,9 @@ function App() {
 
       <Projects />
 
-      
       <Faq />
+
+      
 
       <NewsLetter />
 

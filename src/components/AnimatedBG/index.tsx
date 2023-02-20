@@ -3,7 +3,7 @@ import './styles.css'
 import {Link} from 'react-scroll'
 import Wave from '../CssWave'
 // import Art from '../../assets/'
-import character from '../../assets/character.png'
+
 import NeonButton from '../Neonbutton/neonbutton'
 const AnimatedHero = () => {
   return (
@@ -50,7 +50,7 @@ const AnimatedHero = () => {
             </div>
           </div>
           <div className="flex justify-center items-center">
-            <img src={character} alt="luitomania_hero_bg" />
+            <img src="character.png" alt="luitomania_hero_bg" />
           </div>
         </div>
     </div>

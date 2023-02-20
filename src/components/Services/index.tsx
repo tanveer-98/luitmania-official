@@ -32,7 +32,6 @@ const Services = () => {
     );
   }
   return (
-
     <div className=" bg-mainMenu">
       <Heading
         styles="mb-2 pt-12 uppercase text-[color:var(--main-text-color)]  text-2xl text-center md:text-3xl"
@@ -43,16 +42,16 @@ const Services = () => {
         styles=" px-10 sub-title mb-6 text-[color:var(--main-text-color)] text-xl text-center md:text-[16px]"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
       />
-    <div className="flex justify-center items-center h-full">
-      <div className=" my-12 gap-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <GlassCard />
-        <GlassCard />
-        <GlassCard />
-        <GlassCard />
-        <GlassCard />
-        <GlassCard />
+      <div className="flex justify-center items-center h-full">
+        <div className=" my-12 gap-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <GlassCard colors="#ffffff" />
+          <GlassCard colors="#7cff32" />
+          <GlassCard colors="#32a4ff" />
+          <GlassCard colors="#db32ff" />
+          <GlassCard colors="#ffde32" />
+          <GlassCard colors="#32ffd0" />
+        </div>
       </div>
-    </div>
     </div>
   );
 };
