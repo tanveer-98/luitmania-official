@@ -134,7 +134,7 @@ const Navbar = () => {
       >
         <button
           id="menu-btn"
-          className={`bg-[#424242] p-2 rounded-md z-30 inline-block mr-[200px] md:hidden focus:outline-none hamburger  ${
+          className={`bg-[#424242] p-2 rounded-md z-30 inline-block ml-[100px] mr-[100px] md:hidden focus:outline-none hamburger  ${
             open ? "open" : ""
           }`}
           onClick={toggleHam}
