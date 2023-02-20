@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import Logo from '../../assets/luitomania.png'
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrollReached, setScrollReached] = useState(false);
@@ -134,7 +134,7 @@ const Navbar = () => {
       >
         <button
           id="menu-btn"
-          className={`bg-[#424242] p-2 rounded-md z-30 inline-block ml-[3%] md:hidden focus:outline-none hamburger  ${
+          className={`bg-[#424242] p-2 rounded-md z-30 inline-block mr-[200px] md:hidden focus:outline-none hamburger  ${
             open ? "open" : ""
           }`}
           onClick={toggleHam}

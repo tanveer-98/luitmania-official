@@ -26,7 +26,7 @@ font-family: 'Varela Round', sans-serif;
 
 @font-face{
   font-family: Rosmatica;
-  src: url('./assets/rosmatika-font/RosmatikaRegular-BWA45.ttf');
+  src: url('./rosmatika-font/RosmatikaRegular-BWA45.ttf');
 }
 .logo{
   font-family: 'Rosmatica','sans-serif';
@@ -362,8 +362,8 @@ body {
 
 .mobile_close {
   /* transition : visibility 0s ease-in-out 2s , opacity 1s ease-in-out 0s; */
-  visibility: visible;
-  opacity: 1;
+  visibility: hidden;
+  opacity: 0;
   animation: slide-right 1s ease-in-out;
   /* transform : scaleX(0); */
   transform : translateX(-800px)
@@ -442,4 +442,13 @@ body {
   height: 2px;
   width: 38%;
 
+}
+
+/* NEWSLETTTER  */
+
+.newsletter img{
+  height: 100%;
+  width: 100%;
+  mix-blend-mode:screen;
+ position: absolute;
 }

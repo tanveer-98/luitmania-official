@@ -22,12 +22,13 @@ const NewsLetter = () => {
     }, [controls, inView]);
     return (
       <motion.div
-        className="max-w-lg mx-auto py-24 "
+        className="max-w-lg relative mx-auto py-24 overflow-hidden "
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={newsVariants}
       >
+        <img src="background2.jpg" alt="" />
         <h2 className="px-3 mb-6 text-3xl font-semibold text-center text-white md:text-4xl">
           Stay up-to-date with what we're doing
         </h2>
@@ -69,7 +70,9 @@ const NewsLetter = () => {
   }
 
   return (
-    <section id="newsletter" className="bg-cover bg-softBlue bg-newsLetterBg bg-fixed">
+    <section id="newsletter" className="newsletter relative  ">
+
+   
       {/* <div className="max-w-lg mx-auto py-24 mt-20">
         <p
           className="mb-6 text-lg tracking-widest text-center
