@@ -28,7 +28,7 @@ const NewsLetter = () => {
         animate={controls}
         variants={newsVariants}
       >
-        <img src="background2.jpg" alt="" />
+        {/* <img src="background2.jpg" alt="" /> */}
         <h2 className="px-3 mb-6 text-3xl font-semibold text-center text-white md:text-4xl">
           Stay up-to-date with what we're doing
         </h2>
@@ -70,7 +70,7 @@ const NewsLetter = () => {
   }
 
   return (
-    <section id="newsletter" className="newsletter relative  ">
+    <section id="newsletter" className="newsletter relative bg-bodyColorMain ">
 
    
       {/* <div className="max-w-lg mx-auto py-24 mt-20">
