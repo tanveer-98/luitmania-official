@@ -13,14 +13,15 @@ import {
 } from "formik";
 import {FiSend} from 'react-icons/fi'
 const styles = {
-  label: "block text-gray-700 text-sm font-bold pt-2 pb-1 dark:text-white",
+  formcontainer : "flex flex-col justify-center items-center",
+  label: "block text-gray-700 text-sm font-bold pt-2 pb-1 dark:text-white w-full",
   field:
     "bg-gray-100 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none focus:bg-gray-200",
   button:
     " bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600",
   errorMsg: "text-red-500 text-sm",
   textarea:
-    "bg-gray-100 w-[300px] sm:w-[600px] lg:w-[800px] focus:shadow-outline rounded block w-full appearance-none focus:bg-gray-200 p-5",
+    "bg-gray-100  focus:shadow-outline rounded block w-full appearance-none focus:bg-gray-200 p-5",
 };
 
 import ReCAPTCHA from "react-recaptcha";
@@ -35,7 +36,7 @@ const MyTextArea = ({ label, ...props }:any) => {
         <span className={styles.errorMsg}>*</span>
       </label>
       <textarea
-        className="w-[400px] sm:w-[600px] lg:w-[800px]"
+        className="w-full "
         {...field}
         {...props}
       ></textarea>
@@ -68,13 +69,13 @@ const Contact = () => {
     }, [controls, inView]);
     return (
       <motion.div
-        className="w-[50%] mr-5"
+        className="w-full md:w-[50%] flex flex-col justify-center items-center"
         ref={refHeading}
         initial="hidden"
         animate={controls}
         variants={Variants1}
       >
-        <h3 className=" font-bold text-center text-softBlue text-4xl md:text-6xl ">
+        <h3 className=" font-bold text-center w-full text-softBlue text-4xl md:text-6xl ">
           {" "}
           WRITE TO US
         </h3>
@@ -97,7 +98,7 @@ const Contact = () => {
     return (
       <motion.div
         id="contactus"
-        className=""
+        className="w-full md:w-[50%]  flex justify-center items-center"
         ref={refHeading}
         initial="hidden"
         animate={controls}
@@ -171,8 +172,8 @@ const Contact = () => {
           touched,
           setFieldValue,
         }) => (
-          <div className="w-full flex justify-center my-10">
-            <Form className=" form-training w-[300px] sm:w-[600px] lg:w-[800px]">
+          <div className={`w-[90%] md:w-full flex justify-center items-center`}>
+            <Form className={`w-[90%] md:w-full`}>
               <div className="form-group row py-sm-1 px-sm-3">
                 <label className={styles.label} htmlFor="fName">
                   First Name<span className={styles.errorMsg}>*</span>
