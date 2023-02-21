@@ -70,7 +70,7 @@ const NewsLetter = () => {
   }
 
   return (
-    <section id="newsletter" className="newsletter relative bg-bodyColorMain ">
+    <section id="newsletter" className="newsletter relative bg-bodyColorMain w-full overflow-x-hidden ">
 
    
       {/* <div className="max-w-lg mx-auto py-24 mt-20">

@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed py-2 top-0 backdrop-blur-lg  transition-all duration-300 ease-linear z-20 ${
+      className={`fixed py-2 left-0 top-0 backdrop-blur-lg  transition-all duration-300 ease-linear z-20 ${
         scrollReached ? "bg-bodyColorMain" : "bg-transparent"
       } w-full mx-auto px-1`}
     >
@@ -134,7 +134,7 @@ const Navbar = () => {
       >
         <button
           id="menu-btn"
-          className={`bg-[#424242] p-2 rounded-md z-30 inline-block ml-[10%] mr-[10%] md:hidden focus:outline-none hamburger  ${
+          className={`p-2 rounded-md z-30 inline-block ml-[10%] mr-[10%] md:hidden focus:outline-none hamburger  ${
             open ? "open" : ""
           }`}
           onClick={toggleHam}
