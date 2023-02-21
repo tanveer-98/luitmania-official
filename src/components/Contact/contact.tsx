@@ -358,7 +358,7 @@ const Contact = () => {
   return (
     
 
-    <div id="contact" className=" w-[90%] mx-auto flex pt-10 flex-col md:flex-row md:justify-center md:items-center justify-center items-center ">
+    <div id="contact" className=" w-[90%] overflow-x-hidden mx-auto flex pt-10 flex-col md:flex-row md:justify-center md:items-center justify-center items-center ">
       {/* <div className="w-[50%] mr-5">
         <h3 className=" font-bold text-center text-softBlue text-4xl md:text-6xl ">
           {" "}
