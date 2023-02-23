@@ -14,12 +14,13 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import AnimatedBG from "./components/AnimatedBG";
 import HoverCard from "./components/HoverCard";
-import Services from "./components/Services"
-
-
+import Services from "./components/Services";
+import Testimonials from "./components/Testimonials";
+import Maintainence from "./components/Maintainence";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [maintenance , setMaintenance] = useState(true);
 
   useEffect(() => {
     const tabs = document.querySelectorAll(".tab");
@@ -48,6 +49,9 @@ function App() {
   }, []);
 
   return (
+    <>
+    {
+      !maintenance ? 
     <div>
       <Navbar />
 
@@ -55,26 +59,28 @@ function App() {
 
       {/* <Hero /> */}
 
-      <Services/>
-      
+      <Services />
+
       <AboutUs />
 
       <Team />
 
       <Projects />
+      
+      <Testimonials />
 
       <Faq />
 
-      
-
       <NewsLetter />
 
-      <div className="w-full ">
+      <div className="w-full bg-mainMenu ">
         <Contact />
       </div>
 
       <Footer />
-    </div>
+    </div>  : <Maintainence/>
+    } 
+    </>
   );
 }
 

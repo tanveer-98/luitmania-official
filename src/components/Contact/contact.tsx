@@ -14,7 +14,7 @@ import {
 import {FiSend} from 'react-icons/fi'
 const styles = {
   formcontainer : "flex flex-col justify-center items-center",
-  label: "block text-gray-700 text-sm font-bold pt-2 pb-1 dark:text-white w-full",
+  label: "block text-white text-sm font-bold pt-2 pb-1 dark:text-white w-full",
   field:
     "bg-gray-100 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none focus:bg-gray-200",
   button:
@@ -40,9 +40,9 @@ const MyTextArea = ({ label, ...props }:any) => {
         {...field}
         {...props}
       ></textarea>
-      {meta.touched && meta.error ? (
+      {/* {meta.touched && meta.error ? (
         <div className="error">{meta.error}</div>
-      ) : null}
+      ) : null} */}
     </>
   );
 };
@@ -75,11 +75,11 @@ const Contact = () => {
         animate={controls}
         variants={Variants1}
       >
-        <h3 className=" font-bold text-center w-full text-softBlue text-4xl md:text-6xl ">
+        <h3 className=" font-bold text-center w-full text-white text-4xl md:text-6xl ">
           {" "}
           WRITE TO US
         </h3>
-        <p className=" text-gray-600 myyarn add -2 text-center text-2xl dark:text-white">
+        <p className=" text-gray-300 myyarn add -2 text-center text-2xl dark:text-white">
           {" "}
           Feel Free to Connect
         </p>
@@ -258,6 +258,12 @@ const Contact = () => {
                 className={`${styles.textarea}`}
                
               />
+              
+              <ErrorMessage
+                  name="message"
+                  component="div"
+                  className={styles.errorMsg}
+                />
 
                   <div>
 

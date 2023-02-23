@@ -25,27 +25,7 @@ const Projects = () => {
     },
     hidden: { x: 0, y: 100, scale: 1, opacity: 0 },
   };
-  const square2Variants = {
-    visible: {
-      x: 0,
-      y: 0,
-      scale: 1,
-      opacity: 1,
-      transition: { duration: 1, delay: 0.4 },
-    },
-    hidden: { x: 0, y: 100, scale: 1, opacity: 0 },
-  };
-
-  const square3Variants = {
-    visible: {
-      x: 0,
-      y: 0,
-      scale: 1,
-      opacity: 1,
-      transition: { duration: 1, delay: 0.6 },
-    },
-    hidden: { x: 0, y: 100, scale: 1, opacity: 0 },
-  };
+ 
   interface IHeading{
     content : string ; 
     styles: string ; 

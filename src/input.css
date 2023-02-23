@@ -24,12 +24,20 @@ font-family: 'Roboto Mono', monospace;
 font-family: 'Varela Round', sans-serif;
    */
 
+   @font-face{
+    font-family: Agustina_400;
+    src: url('./Agutina400.otf');
+  }
 @font-face{
   font-family: Rosmatica;
   src: url('./rosmatika-font/RosmatikaRegular-BWA45.ttf');
 }
+@font-face{
+  font-family: Agustina;
+  src: url('./AgustinaDemo.ttf');
+}
 .logo{
-  font-family: 'Rosmatica','sans-serif';
+  font-family: 'Agustina_400','sans-serif';
 }
 
 :root{

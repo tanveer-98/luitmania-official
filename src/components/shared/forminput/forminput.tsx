@@ -1,4 +1,6 @@
 // import "./forminput.css";
+
+
 const FormInput = ({ label, inputOptions } : any) => {
   return (
     <div className='groupInp'>

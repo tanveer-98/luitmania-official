@@ -1,0 +1,87 @@
+.testimonial {
+    height : 500px;
+    width: 350px;
+    border-radius: 15px;
+    /* background-color: black; */
+    
+    padding :40px 30px;
+    margin: 10px 10px;
+    box-shadow : inset 0 2px 2px 5px #ffffff8a;
+    background-color: linear-gradient( to bottom,
+        rgb(255, 247, 247) 0% , 
+        rgb(39, 39, 39) 100%
+    );
+    
+}
+.client-container{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.client-container .name{
+    color : white;
+    
+}
+.client-container .designation{
+    color : white;
+}
+
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    height: 100px ; 
+    width: 100px;
+    border: 1px solid white;
+    background-color: rgb(109, 100, 100);
+    overflow: hidden;
+    box-shadow:0  0 10px white ;
+}
+.image-container img{
+    height : 100px ; 
+    width: 100px ; 
+    background-size: contain;
+}
+
+.rating .star{
+    height : 30px ; 
+    width: 30px ; 
+
+}
+
+.content {
+    margin-top : 20px;
+    position: relative;
+    text-align: center;
+    color : white;
+    /* padding : 0 0px 25px 0;  */
+}
+
+.content .quote-start{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top : -20px; 
+    left : -20px ; 
+   
+
+}
+
+
+.content .quote-end{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom : -20px; 
+    right: -20px ; 
+   
+    
+      
+    
+    /* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
+    
+}

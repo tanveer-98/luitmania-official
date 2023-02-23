@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const NewsLetter = () => {
   const newsVariants = {
     visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1 } },
-    hidden: { x: 0, y: 0, scale: 0, opacity: 0 },
+    hidden: { x: 0, y: 0, scale: 1, opacity: 0 },
   };
   const [email, setEmail] = useState("");
   const handleChange = (event: any) => {
@@ -19,7 +19,7 @@ const NewsLetter = () => {
       if (inView) {
         controls.start("visible");
       }
-    }, [controls, inView]);
+    }, [inView]);
     return (
       <motion.div
         className="max-w-lg relative mx-auto py-24 overflow-hidden "
@@ -70,7 +70,7 @@ const NewsLetter = () => {
   }
 
   return (
-    <section id="newsletter" className="newsletter  bg-bodyColorMain w-full overflow-x-hidden ">
+    <section id="newsletter" className="newsletter relative bg-bodyColorMain w-full ">
 
    
       {/* <div className="max-w-lg mx-auto py-24 mt-20">
