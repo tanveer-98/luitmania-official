@@ -17,11 +17,32 @@ import HoverCard from "./components/HoverCard";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import Maintainence from "./components/Maintainence";
+import Slider from "./components/Carousal/Slider";
+import ButtonToTop from "./components/ButtonTop";
 
 function App() {
   const [count, setCount] = useState(0);
   const [maintenance , setMaintenance] = useState(true);
+  const [show , setShow] = useState(false);
+  const options  = {
+    top: 0, 
+    left : 0 , 
+    smooth: "smooth"
+    
+  }
+  const onClickHandler = ()=>{
+    window.scrollTo(options);
+  }
 
+  const ShowbuttonTop = ()=>{
+    if(window.scrollY > 500){
+        setShow(true);
+    }
+    else setShow(false);
+  }
+  
+  window.addEventListener('scroll',ShowbuttonTop);
+  
   useEffect(() => {
     const tabs = document.querySelectorAll(".tab");
     const panels = document.querySelectorAll(".panel");
@@ -55,6 +76,7 @@ function App() {
     <div>
       <Navbar />
 
+    {/* <Slider/> */}
       <AnimatedBG />
 
       {/* <Hero /> */}
@@ -76,7 +98,9 @@ function App() {
       <div className="w-full bg-mainMenu ">
         <Contact />
       </div>
-
+      <div className={` rocket ${show?"fade-in-image":'fade-out-image'} `}>
+    <ButtonToTop onclick={onClickHandler} text="Back To Top" children = {<img src ="rocket.svg" alt="ToTop"/>}/>
+    </div>
       <Footer />
     </div>  : <Maintainence/>
     } 
