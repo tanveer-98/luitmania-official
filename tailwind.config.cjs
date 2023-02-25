@@ -18,7 +18,8 @@ module.exports = {
       serif: ["Merriweather", "serif"],
       trispace: ["Trispace", "sans-serif"],
       abril: ["Abril Fatface", "cursive"],
-      raleway : ['Raleway', "sans-serif"]
+      raleway : ['Raleway', "sans-serif"],
+      poppins : ['Poppins', "sans-serif"]
       
     },
 

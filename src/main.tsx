@@ -1,10 +1,29 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import { Provider } from 'react-redux'
+import {BrowserRouter as Router} from 'react-router-dom'
 import './input.css'
+import App from './App'
+// import {store}  from './store'
+import "regenerator-runtime";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  // <React.StrictMode>
-    <App />
-  // </React.StrictMode>
+
+declare global {
+  interface Window {
+    cloudinary: any;
+  }
+
+}
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLDivElement
 )
+
+  root.render(
+
+      <Router>
+      <App />
+      </Router>
+
+  )
+

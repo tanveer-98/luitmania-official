@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import GlassCard from "../GlassCard";
+import SERVICES from "./services.json";
 const Services = () => {
   const headingVariants = {
     visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1 } },
@@ -44,12 +45,8 @@ const Services = () => {
       />
       <div className="flex justify-center items-center h-full">
         <div className=" my-12 gap-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <GlassCard colors="#ffffff" />
-          <GlassCard colors="#7cff32" />
-          <GlassCard colors="#32a4ff" />
-          <GlassCard colors="#db32ff" />
-          <GlassCard colors="#ffde32" />
-          <GlassCard colors="#32ffd0" />
+          {SERVICES.map((data: any, idx: number) => <GlassCard colors={data.color} />
+          )}
         </div>
       </div>
     </div>

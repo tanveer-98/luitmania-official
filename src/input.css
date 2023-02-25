@@ -231,6 +231,15 @@ body {
   
   z-index: 10;
 }
+.whatsapp{
+  opacity: 0;
+  visibility: hidden;
+  position:fixed; 
+  bottom : 6rem; 
+  right: 2rem; 
+  
+  z-index: 10;
+}
 .fade-in-image{
   
   visibility: visible;
