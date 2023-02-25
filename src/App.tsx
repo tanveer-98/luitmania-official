@@ -22,7 +22,7 @@ import ButtonToTop from "./components/ButtonTop";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [maintenance , setMaintenance] = useState(false);
+  const [maintenance , setMaintenance] = useState(true);
   const [show , setShow] = useState(false);
   const options  = {
     top: 0, 
