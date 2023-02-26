@@ -3,10 +3,10 @@ import reactLogo from "./assets/react.svg";
 import Arrow from "./assets/icon-arrow.svg";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Hero from "../components/hero";
+import Hero from "../components/Hero/hero";
 import AboutUs from "../components/AboutUs";
 import Team from "../components/OurTeam";
-import NewsLetter from "../components/newsletter";
+import NewsLetter from "../components/NewsLetter";
 import Faq from "../components/FAQ";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact/contact";
@@ -20,6 +20,8 @@ import Maintainence from "../components/Maintainence";
 import Slider from "../components/Carousal/Slider";
 import ButtonToTop from "../components/ButtonTop";
 import CardSlider from "../components/CardSlider";
+import SlickCarousel from "../components/MultiCarousel";
+
 function Home() {
   const [count, setCount] = useState(0);
   //   let m = import.meta.env.VITE_CI ?? true;
@@ -73,11 +75,7 @@ function Home() {
       {!maintenance ? (
         <div>
           <Navbar />
-
-          <CardSlider />
-          {/* <Slider/> */}
           <AnimatedBG />
-          {/* <Hero /> */}
           <Services />
           <AboutUs />
           <Team />
@@ -85,7 +83,7 @@ function Home() {
           <Testimonials />
           <Faq />
           <NewsLetter />
-          <div className="w-full bg-mainMenu ">
+          <div className="w-full bg-bodyColorMain ">
             <Contact />
           </div>
           <div
@@ -108,13 +106,18 @@ function Home() {
               "
               children={
                 <a href="https://wa.me/7637063451">
-                  <img height="100px" width="100px" src="whatsapp.svg" alt="web whatsapp luitomania" />
+                  <img
+                    height="100px"
+                    width="100px"
+                    src="whatsapp.svg"
+                    alt="web whatsapp luitomania"
+                  />
                 </a>
               }
             />
           </div>
           <Footer />
-          <button></button>
+        
         </div>
       ) : (
         <Maintainence />

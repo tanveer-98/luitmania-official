@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section id="footer" className="bg-veryDarkBlue">
+    <section id="footer" className="bg-mainMenu">
       <div className="container flex flex-col items-center justify-center mx-auto  space-y-10 px-6 md:flex-row md:space-y-0">
         {/* Logo Container */}
         <div

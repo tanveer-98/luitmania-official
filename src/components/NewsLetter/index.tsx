@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import FormInput from "./shared/forminput/forminput";
+import FormInput from "../shared/forminput/forminput";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 const NewsLetter = () => {
@@ -70,7 +70,7 @@ const NewsLetter = () => {
   }
 
   return (
-    <section id="newsletter" className="newsletter relative bg-bodyColorMain w-full ">
+    <section id="newsletter" className="newsletter relative bg-mainMenu w-full ">
 
    
       {/* <div className="max-w-lg mx-auto py-24 mt-20">

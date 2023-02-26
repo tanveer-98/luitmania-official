@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+import  TestimonialJSON from './testimonials.json'
 import TestimonialCard from "../TestimonialCard";
+import MultiCarousel from "../MultiCarousel";
+
+
 const Testimonials = () => {
   interface IProject {
     title: string;
@@ -41,7 +44,7 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="flex pt-16 bg-mainMenu  justify-center items-center flex-wrap  overflow-hidden  h-full w-full">
+    <div className="flex py-16 bg-mainMenu  justify-center items-center flex-wrap  overflow-hidden  h-full w-full">
       <Heading
         styles="mb-2 uppercase text-[color:var(--main-text-color)]  text-2xl text-center md:text-3xl"
         content="Testimonials from our Prestigious Clients"
@@ -52,7 +55,7 @@ const Testimonials = () => {
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
       />
 
-      <div className="flex flex-row flex-wrap justify-center items-center">
+      {/* <div className="flex flex-row flex-wrap justify-center items-center">
         <TestimonialCard
           profileImg="tanveer.webp"
           content="Great support from the team . It has been a wonderful journey from the beginning of the project till the end."
@@ -77,7 +80,10 @@ const Testimonials = () => {
           client_name="N. Borah"
           designation="Founder of Apex Design & Construction"
         />
-      </div>
+      </div> */}
+
+      <MultiCarousel data = {TestimonialJSON}/>
+
     </div>
   );
 };
