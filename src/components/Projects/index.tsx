@@ -3,6 +3,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import HoverCard from "../HoverCard";
 import PROJECTS from './projects.json'
+import MultiCarousel from "../MultiCarousel";
 
 interface IProject{
   title : string;
@@ -89,6 +90,48 @@ const Projects = () => {
       </motion.div>
     );
   }
+
+  const styles = {
+    carousal_container:"md:hidden flex justify-center items-center my-12"
+  }
+  function Carousel(){
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+    return (
+      <motion.div
+        className="h-full w-full"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={headingVariants}
+      >
+        <MultiCarousel data = {PROJECTS} >
+      
+        {
+        PROJECTS.map((item: IProject,idx:number)=>{
+          return <div className={styles.carousal_container}>
+          <Card
+          
+          title={item.title}
+          imageUrl={item.imageUrl}
+          content={item.content}
+          url={item.url}
+          
+          />
+        </div>
+
+        })
+      }
+        </MultiCarousel>
+      </motion.div>
+    );
+
+  }
  
   return (
     <section id="projects" className="py-16 bg-bodyColorMain ">
@@ -102,8 +145,8 @@ const Projects = () => {
          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         />
   
-      {/* Boxes Container */}
-      <div className="container mx-auto md:mt-5  w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl  ">
+      {/* Boxes Container For Web*/}
+      <div className="hidden container mx-auto md:mt-5  w-full md:grid md:grid-cols-2 lg:grid-cols-3 max-w-6xl  ">
        
       {
         PROJECTS.map((item: IProject,idx:number)=>{
@@ -123,10 +166,12 @@ const Projects = () => {
       
       
       </div>
-      <div className="w-full flex justify-center items-center">
-      <button></button>
 
-      </div>
+      {/* Mobile Carousel */}
+      <Carousel/>
+
+
+  
     </section>
   );
 };

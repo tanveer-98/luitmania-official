@@ -12,7 +12,7 @@ interface IMultiCarousel{
    data : [IObject]
 }
 
-const MultiCarousel = ({data}:any) => {
+const MultiCarousel = ({children  , data}:any) => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -43,22 +43,7 @@ const MultiCarousel = ({data}:any) => {
     showDots={true}
     containerClass="w-full h-full"
     >
-      {
-         data.map((element:any)=><div className={styles.carousal_container}>
-      
-        <TestimonialCard
-         profileImg={element.profileImg}
-         client_name= {element.client_name}
-         designation = {element.designation}          
-         content = {element.content}
-        />
-        
-      </div>
-
-         )
-
-
-      }
+      {children}
      
     </Carousel>
     // </div>

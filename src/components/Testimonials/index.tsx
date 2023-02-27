@@ -42,16 +42,59 @@ const Testimonials = () => {
       </motion.h2>
     );
   }
+  interface IContent{
+    content : any
+  }
+  const styles = {
+    carousal_container:"flex justify-center items-center my-12"
+  }
+  function Carousel() {
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+    return (
+      <motion.div
+        className="h-full w-full"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={headingVariants}
+      >
+        <MultiCarousel data = {TestimonialJSON}>
+        {
+         TestimonialJSON.map((element:any)=><div className={styles.carousal_container}>
+      
+        <TestimonialCard
+         profileImg={element.profileImg}
+         client_name= {element.client_name}
+         designation = {element.designation}          
+         content = {element.content}
+        />
+        
+      </div>
+
+         )
+
+
+      }
+        </MultiCarousel>
+      </motion.div>
+    );
+  }
 
   return (
-    <div className="flex py-16 bg-mainMenu  justify-center items-center flex-wrap  overflow-hidden  h-full w-full">
+    <div className="flex flex-col py-16 bg-mainMenu  justify-center items-center flex-wrap  overflow-hidden  h-full w-full">
       <Heading
-        styles="mb-2 uppercase text-[color:var(--main-text-color)]  text-2xl text-center md:text-3xl"
+        styles="mb-2 block uppercase text-[color:var(--main-text-color)]  text-2xl text-center md:text-3xl"
         content="Testimonials from our Prestigious Clients"
       />
 
       <Heading
-        styles=" px-10 sub-title mb-6 text-[color:var(--main-text-color)] text-xl text-center md:text-[16px]"
+        styles=" px-10 block sub-title mb-6 text-[color:var(--main-text-color)] text-xl text-center md:text-[16px]"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
       />
 
@@ -81,8 +124,11 @@ const Testimonials = () => {
           designation="Founder of Apex Design & Construction"
         />
       </div> */}
-
-      <MultiCarousel data = {TestimonialJSON}/>
+     
+      <Carousel/>
+        
+      {/* <MultiCarousel data = {TestimonialJSON}  /> */}
+        
 
     </div>
   );
