@@ -26,7 +26,7 @@ function Home() {
   const [count, setCount] = useState(0);
   //   let m = import.meta.env.VITE_CI ?? true;
   const [maintenance, setMaintenance] = useState(import.meta.env.VITE_MAINTENANCE === "true");
-  console.log(import.meta.env.VITE_MAINTENANCE, maintenance)
+  // console.log(import.meta.env.VITE_MAINTENANCE, maintenance)
   const [show, setShow] = useState(false);
   const options = {
     top: 0,
