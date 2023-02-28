@@ -17,7 +17,7 @@ const HoverCard = ({title,imageUrl,content, url} : IHoverCard) => {
             alt="hovercard_image1"
           />
         </div>
-        <p className="card_para">View More</p>
+        <p className="card_para mt-4">View More</p>
         <div className="hovercard_content">
           <h3>{title}</h3>
           <p>

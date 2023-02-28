@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.css'
-const Wave = () => {
+const Wave = ({children}: any) => {
   return (
     <div>
          <svg className="footer-waves" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -12,9 +12,10 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
 <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
 <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-<use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
+<use xlinkHref="#gentle-wave" x="48" y="7" fill="rgba(255,255,255,0.8)" />
 </g>
 </svg>
+{children}
     </div>
   )
 }

@@ -43,10 +43,9 @@ const Services = () => {
         styles=" px-10 sub-title mb-6 text-[color:var(--main-text-color)] text-xl text-center md:text-[16px]"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
       />
-      <div className="flex justify-center items-center h-full">
+      <div className="flex justify-center items-center h-full ">
         <div className=" my-12 gap-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((data: any, idx: number) => <GlassCard colors={data.color} />
-          )}
+          {SERVICES.map((data: any, idx: number) => <GlassCard colors={data.color} heading= {data.heading} />)}
         </div>
       </div>
     </div>

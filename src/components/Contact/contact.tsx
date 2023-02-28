@@ -25,6 +25,7 @@ const styles = {
 };
 
 import ReCAPTCHA from "react-recaptcha";
+import Button from "../Neonbutton/neonbutton";
 
 // import grecaptcha from 'grecaptcha';
 const MyTextArea = ({ label, ...props }:any) => {
@@ -292,7 +293,7 @@ const Contact = () => {
               {/* 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI is for testing only , create one for your own site  */}
 
               <div className=" flex justify-center flex-wrap items-center p-4 border-t border-gray-200 rounded-b-md">
-                <button
+                {/* <button
                   type="submit"
                   className="px-6
                   py-2.5
@@ -326,7 +327,15 @@ const Contact = () => {
                     SEND <FiSend />
                   </div>
                 </button>
-              </div>
+                */}
+              
+              <Button type="submit">
+              <div className="flex flex-row gap-1">
+                    {" "}
+                    SEND <FiSend />
+                  </div>
+              </Button>
+                </div> 
             </Form>
           </div>
         )}

@@ -15,7 +15,12 @@ const TestimonialCard = ({
   content,
 }: ITestimonialCard) => {
   return (
-    <div className="testimonial  backdrop-blur-sm flex flex-col items-center justify-center">
+    <div className="testimonial  flex flex-col items-center justify-center">
+      {/* <img src="circle.png" className="circle-1"></img> */}
+      {/* <img src="circle.png" className="circle-2"></img> */}
+      {/* <img src="circle.png" className="circle-3"></img> */}
+      {/* <img src="circle.png" className="circle-4"></img> */}
+      {/* <img src="circle.png" className="circle-5"></img> */}
       <div className="client-container">
         <div className="image-container flex justify-center items center">
           <img src={profileImg} alt="testimonial profile image" />

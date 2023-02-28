@@ -8,7 +8,7 @@ import NeonButton from '../Neonbutton/neonbutton'
 const AnimatedHero = () => {
   return (
     <div id="Ahero" className="a_hero">
-    <div className="wrapper mt-15 pt-10  md:pt-0 flex justify-center items-center">
+    <div className="wrapper mt-15 pt-12 md:pt-0 flex justify-center items-center">
         {/* <h2 className="wrapper__h2">Animated Background</h2> */}
         <div className="box">
             <div></div>
@@ -23,7 +23,7 @@ const AnimatedHero = () => {
             <div></div>
         </div>
 
-        <div className="wrapper-hero w-[90%] h-[90%] grid grid-cols-1 md:grid-cols-2">
+        <div className="wrapper-hero w-[90%] h-[90%] grid grid-cols-1 md:grid-cols-2 pt-12">
           <div className="text-white md:flex items-center justify-center">
             
             <div>

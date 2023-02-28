@@ -1,20 +1,26 @@
 [
     {
-        "color" : "#ffffff"
+        "color" : "#ffffff",
+        "heading" : "Digital Marketing"
     },
     {
-        "color" : "#7cff32"
+        "color" : "#7cff32",
+        "heading" : "App Development"  
     },
     {
-        "color" : "#32a4ff"
+        "color" : "#32a4ff",
+        "heading" : "Custom Software Development"  
     },
     {
-        "color" : "#db32ff"
+        "color" : "#db32ff",
+        "heading" : "Digital Marketing"  
     },
     {
-        "color" : "#ffde32"
+        "color" : "#ffde32",
+        "heading" : "Content Writing"  
     },
     {
-        "color" : "#32ffd0"
+        "color" : "#32ffd0",
+        "heading" : "Video Editing"  
     }
 ]
