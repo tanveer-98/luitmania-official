@@ -26,15 +26,15 @@ font-family: 'Varela Round', sans-serif;
 
    @font-face{
     font-family: Agustina_400;
-    src: url('./Agutina400.otf');
+    src: url('/Agutina400.otf');
   }
 @font-face{
   font-family: Rosmatica;
-  src: url('./rosmatika-font/RosmatikaRegular-BWA45.ttf');
+  src: url('/rosmatika-font/RosmatikaRegular-BWA45.ttf');
 }
 @font-face{
   font-family: Agustina;
-  src: url('./AgustinaDemo.ttf');
+  src: url('/AgustinaDemo.ttf');
 }
 .logo{
   font-family: 'Agustina_400','sans-serif';
