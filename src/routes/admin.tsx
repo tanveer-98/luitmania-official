@@ -21,12 +21,17 @@ import Slider from "../components/Carousal/Slider";
 import ButtonToTop from "../components/ButtonTop";
 import CardSlider from "../components/CardSlider";
 import SlickCarousel from "../components/MultiCarousel";
+import AdminAnimatedBG from "../components/AdminAnimatedBG";
 
-function Home() {
-  const [count, setCount] = useState(0);
+import testimonialsImage from "/blog.png"
+import { Route, Routes } from "react-router-dom";
+import AdminHome from "../components/AdminHome";
+import AdminNavbar from "../components/AdminNavbar";
+
+
+function Admin() {
   //   let m = import.meta.env.VITE_CI ?? true;
-  const [maintenance, setMaintenance] = useState(import.meta.env.VITE_MAINTENANCE === "true");
-  // console.log(import.meta.env.VITE_MAINTENANCE, maintenance)
+  const [maintenance, setMaintenance] = useState(false);
   const [show, setShow] = useState(false);
   const options = {
     top: 0,
@@ -74,51 +79,20 @@ function Home() {
   return (
     <>
       {!maintenance ? (
-        <div>
-          <Navbar />
-          <AnimatedBG />
-          <Services />
-          <AboutUs />
-          <Team />
-          <Projects />
-          <Testimonials />
-          <Faq />
-          <NewsLetter />
-          <div className="w-full bg-bodyColorMain ">
-            <Contact />
-          </div>
-          <div
-            className={` rocket ${show ? "fade-in-image" : "fade-out-image"} `}
-          >
-            <ButtonToTop
-              onclick={onClickHandler}
-              text="Back To Top"
-              children={<img src="rocket.svg" alt="ToTop" />}
-            />
-          </div>
-          <div
-            className={` whatsapp ${
-              show ? "fade-in-image" : "fade-out-image"
-            } `}
-          >
-            <ButtonToTop
-              text="<img width='200px' src='WhatsAppButtonGreenLarge.png' alt='Luitomania Whatsapp'/>
-              
-              "
-              children={
-                <a href="https://wa.me/7637063451">
-                  <img
-                    height="100px"
-                    width="100px"
-                    src="whatsapp.svg"
-                    alt="web whatsapp luitomania"
-                  />
-                </a>
-              }
-            />
-          </div>
+        <div className="h-full">
+          <AdminNavbar />
+          <AdminAnimatedBG>
+            <Routes>
+              <Route path="/" element={<AdminHome />} />
+              <Route path="/services" element={<AdminHome />} />
+              <Route path="/blogs" element={<AdminHome />} />
+              <Route path="/testimonials" element={<AdminHome />} />
+              <Route path="/projects" element={<AdminHome />} />
+            </Routes>
+          </AdminAnimatedBG>
+
           <Footer />
-        
+
         </div>
       ) : (
         <Maintainence />
@@ -127,4 +101,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Admin;
