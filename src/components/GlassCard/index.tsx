@@ -18,7 +18,7 @@ content ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 
   return (
     <div className="glasscard">
-      <div className="container group flex flex-col items-center justify-center h-full w-full p-4 md:h-[400px] md:w-[300px]  ">
+      <div className="container group flex flex-col items-center justify-center h-full w-full p-4 md:h-[500px] md:w-[300px]  ">
         <div style = {{
           backgroundColor : `${colors}`
         }}className={`image-container bg-[${colors}]  group-hover:bg-[${colors}] bg-opacity-[0.08] group-hover:bg-opacity-[0.07]`}>
