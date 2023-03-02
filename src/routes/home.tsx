@@ -25,7 +25,10 @@ import Blogs from "../components/Blogs";
 function Home() {
   const [count, setCount] = useState(0);
   //   let m = import.meta.env.VITE_CI ?? true;
-  const [maintenance, setMaintenance] = useState(import.meta.env.VITE_MAINTENANCE === "true");
+  const [maintenance, setMaintenance] = useState(
+    // import.meta.env.VITE_MAINTENANCE === "true"
+    true 
+    );
   // console.log(import.meta.env.VITE_MAINTENANCE, maintenance)
   const [show, setShow] = useState(false);
   const options = {
