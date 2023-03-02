@@ -17,11 +17,11 @@ import HoverCard from "../components/HoverCard";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import Maintainence from "../components/Maintainence";
-import Slider from "../components/Carousal/Slider";
+// import Slider from "../components/Carousal/Slider";
 import ButtonToTop from "../components/ButtonTop";
-import CardSlider from "../components/CardSlider";
+// import CardSlider from "../components/CardSlider";
 import SlickCarousel from "../components/MultiCarousel";
-
+import Blogs from "../components/Blogs";
 function Home() {
   const [count, setCount] = useState(0);
   //   let m = import.meta.env.VITE_CI ?? true;
@@ -82,6 +82,7 @@ function Home() {
           <Team />
           <Projects />
           <Testimonials />
+          {/* <Blogs/> */}
           <Faq />
           <NewsLetter />
           <div className="w-full bg-bodyColorMain ">

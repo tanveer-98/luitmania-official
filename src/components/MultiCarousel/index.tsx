@@ -41,8 +41,11 @@ const MultiCarousel = ({children  , data}:any) => {
     <Carousel responsive={responsive}
     infinite={true}
     showDots={true}
-    containerClass="w-full h-full"
+    containerClass="w-full h-full relative z-3 bg-transparent"
+    className="bg-transparent"
     >
+     
+      
       {children}
      
     </Carousel>

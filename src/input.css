@@ -267,7 +267,7 @@ body {
 }
 
 .btnTop-tooltip{
-  @apply  absolute py-2 px-5 w-auto right-20 bg-green-300 shadow-md rounded-md 
+  @apply  hidden md:flex absolute py-2 px-5 w-auto right-20 bg-green-300 shadow-md rounded-md 
   text-white text-lg font-bold transition-all duration-200  min-w-max scale-0
 }
 
@@ -517,4 +517,36 @@ body {
   width: 100%;
   mix-blend-mode:screen;
  position: absolute;
+}
+
+
+
+/* BLOGS */
+.blog-header{
+  position: relative;
+}
+.blog-header::after{
+  content : " ";
+  position: absolute;
+  right : -100% ; 
+  top: 50%;
+  height: 6px ; 
+  width : 200px;
+  background: linear-gradient(0deg , white 0% , black 100%)
+}
+/* @media (min-width: 1020px) {
+  .bg-hero {
+    width: 2000px;
+    height: 300px;
+    left: 30%;
+    @apply absolute rounded-l-full top-52 bg-softBlue;
+  } */
+.blog-header::after{
+  content : " ";
+  position: absolute;
+  right : -100% ; 
+  top: 50%;
+  height: 6px ; 
+  width : 200px;
+  background: linear-gradient(0deg , white 0% , black 100%)
 }

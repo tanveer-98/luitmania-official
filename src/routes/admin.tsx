@@ -17,9 +17,9 @@ import HoverCard from "../components/HoverCard";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import Maintainence from "../components/Maintainence";
-import Slider from "../components/Carousal/Slider";
+// import Slider from "../components/Carousal/Slider";
 import ButtonToTop from "../components/ButtonTop";
-import CardSlider from "../components/CardSlider";
+// import CardSlider from "../components/CardSlider";
 import SlickCarousel from "../components/MultiCarousel";
 import AdminAnimatedBG from "../components/AdminAnimatedBG";
 

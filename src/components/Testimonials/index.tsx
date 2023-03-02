@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import  TestimonialJSON from './testimonials.json'
+import TestimonialJSON from "./testimonials.json";
 import TestimonialCard from "../TestimonialCard";
 import MultiCarousel from "../MultiCarousel";
-
 
 const Testimonials = () => {
   interface IProject {
@@ -42,12 +41,12 @@ const Testimonials = () => {
       </motion.h2>
     );
   }
-  interface IContent{
-    content : any
+  interface IContent {
+    content: any;
   }
   const styles = {
-    carousal_container:"flex justify-center items-center my-12"
-  }
+    carousal_container: "flex justify-center items-center my-12",
+  };
   function Carousel() {
     const controls = useAnimation();
     const [ref, inView] = useInView();
@@ -58,40 +57,32 @@ const Testimonials = () => {
     }, [controls, inView]);
     return (
       <motion.div
-        className="h-full w-full"
+        className="h-full w-full relative z-2"
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={headingVariants}
       >
-        <MultiCarousel data = {TestimonialJSON}>
-        {
-         TestimonialJSON.map((element:any)=><div className={styles.carousal_container}>
-      
-        <TestimonialCard
-         profileImg={element.profileImg}
-         client_name= {element.client_name}
-         designation = {element.designation}          
-         content = {element.content}
-        />
-        
-      </div>
-
-         )
-
-
-      }
+        <MultiCarousel data={TestimonialJSON}>
+          {TestimonialJSON.map((element: any) => (
+            <div className={styles.carousal_container}>
+              <TestimonialCard
+                profileImg={element.profileImg}
+                client_name={element.client_name}
+                designation={element.designation}
+                content={element.content}
+              />
+            </div>
+          ))}
         </MultiCarousel>
       </motion.div>
     );
   }
 
   return (
-    <div className="relative z-0 flex flex-col py-16 bg-mainMenu  justify-center items-center flex-wrap  overflow-hidden  h-full w-full">
-      
-      
+    <div className="relative -z-1 flex flex-col py-16 bg-mainMenu  justify-center items-center flex-wrap  overflow-hidden  h-full w-full">
       <Heading
-        styles="mb-2 block uppercase text-[color:var(--main-text-color)]  text-2xl text-center md:text-3xl"
+        styles="mb-2 block uppercase text-white font-bold  text-2xl text-center md:text-3xl"
         content="Testimonials from our Prestigious Clients"
       />
 
@@ -126,12 +117,19 @@ const Testimonials = () => {
           designation="Founder of Apex Design & Construction"
         />
       </div> */}
-     
-      <Carousel/>
-        
-      {/* <MultiCarousel data = {TestimonialJSON}  /> */}
-        
 
+      <div className="relative w-full h-full">
+        <div className="absolute inset-0 z-0">
+          <img src="circle.png" className="circle-4" />
+          <img src="circle.png" className="circle-1"/>
+          {/* <img src="circle.png" className="circle-2"/> */}
+          <img src="circle.png" className="circle-3" />
+          <img src="circle.png" className="circle-5" />
+        </div>
+        <Carousel />
+      </div>
+
+      {/* <MultiCarousel data = {TestimonialJSON}  /> */}
     </div>
   );
 };

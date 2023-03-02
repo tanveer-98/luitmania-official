@@ -11,7 +11,7 @@ const ButtonToTop = ({ onclick, children, text }: ISideBarIconProps) => {
   return (
     <button onClick={onclick} type="button" className="btnTop group">
       {children}
-      <span className="btnTop-tooltip group-hover:scale-100">{ReactHtmlParser(text)}</span>
+      <span className="hidden md:block btnTop-tooltip group-hover:scale-100">{ReactHtmlParser(text)}</span>
     </button>
   );
 };
