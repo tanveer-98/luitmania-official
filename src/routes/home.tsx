@@ -20,14 +20,15 @@ import Maintainence from "../components/Maintainence";
 // import Slider from "../components/Carousal/Slider";
 import ButtonToTop from "../components/ButtonTop";
 // import CardSlider from "../components/CardSlider";
-import SlickCarousel from "../components/MultiCarousel";
+// import SlickCarousel from "../components/MultiCarousel";
 import Blogs from "../components/Blogs";
+import OurLocation from '../components/OurLocation'
 function Home() {
   const [count, setCount] = useState(0);
   //   let m = import.meta.env.VITE_CI ?? true;
   const [maintenance, setMaintenance] = useState(
-    // import.meta.env.VITE_MAINTENANCE === "true"
-    true 
+    import.meta.env.VITE_MAINTENANCE === "true"
+    // true 
     );
   // console.log(import.meta.env.VITE_MAINTENANCE, maintenance)
   const [show, setShow] = useState(false);
@@ -121,6 +122,7 @@ function Home() {
               }
             />
           </div>
+          <OurLocation/>
           <Footer />
         
         </div>

@@ -3,7 +3,7 @@ import Wave from "../CssWave";
 
 const Footer = () => {
   return (
-    <section id="footer" className="bg-mainMenu relative pt-10">
+    <section id="footer" className="bg-bodyColorMain relative ">
       
       {/* <Wave> */}
 
