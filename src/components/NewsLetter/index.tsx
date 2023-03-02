@@ -9,8 +9,12 @@ const NewsLetter = () => {
   };
   const [email, setEmail] = useState("");
   const handleChange = (event: any) => {
+    event.preventDefault();
     setEmail(event.target.value);
   };
+  const onHandleSubmit = (event :  React.FormEvent<HTMLFormElement>)=>{
+    event.preventDefault();
+  }
 
   function NewsBody() {
     const controls = useAnimation();
@@ -34,10 +38,11 @@ const NewsLetter = () => {
         </h2>
         {/* Form */}
         <form
-          action=""
+          
           className="flex flex-col items-start
            justify-center max-w-2xl mx-auto space-y-6 text-base
             px-6 md:flex-row md:space-y-0 md:space-x-4 md:px-0"
+          onSubmit={(e)=>onHandleSubmit(e)}
         >
           {/* Input & Button Container */}
           <div

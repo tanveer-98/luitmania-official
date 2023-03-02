@@ -1,6 +1,6 @@
 // import "./forminput.css";
 
-
+import React from 'react'
 const FormInput = ({ label, inputOptions } : any) => {
   return (
     <div className='groupInp'>
@@ -19,4 +19,4 @@ const FormInput = ({ label, inputOptions } : any) => {
     </div>
   );
 };
-export default FormInput;
+export default React.memo(FormInput);
