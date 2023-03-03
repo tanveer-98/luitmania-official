@@ -1,4 +1,4 @@
-import React, { useRef, useState ,useEffect} from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { sendMessageEmail } from "./service";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -11,9 +11,9 @@ import {
   useField,
   useFormikContext,
 } from "formik";
-import {FiSend} from 'react-icons/fi'
+import { FiSend } from "react-icons/fi";
 const styles = {
-  formcontainer : "flex flex-col justify-center items-center",
+  formcontainer: "flex flex-col justify-center items-center",
   label: "block text-white text-sm font-bold pt-2 pb-1 dark:text-white w-full",
   field:
     "bg-gray-100 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none focus:bg-gray-200",
@@ -28,7 +28,7 @@ import ReCAPTCHA from "react-recaptcha";
 import Button from "../Neonbutton/neonbutton";
 
 // import grecaptcha from 'grecaptcha';
-const MyTextArea = ({ label, ...props }:any) => {
+const MyTextArea = ({ label, ...props }: any) => {
   const [field, meta] = useField(props);
   return (
     <>
@@ -36,11 +36,7 @@ const MyTextArea = ({ label, ...props }:any) => {
         {label}
         <span className={styles.errorMsg}>*</span>
       </label>
-      <textarea
-        className="w-full "
-        {...field}
-        {...props}
-      ></textarea>
+      <textarea className="w-full " {...field} {...props}></textarea>
       {/* {meta.touched && meta.error ? (
         <div className="error">{meta.error}</div>
       ) : null} */}
@@ -49,13 +45,12 @@ const MyTextArea = ({ label, ...props }:any) => {
 };
 
 const Contact = () => {
-
-   const Variants1 = {
+  const Variants1 = {
     visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1 } },
     hidden: { x: -120, y: 0, scale: 1, opacity: 0 },
   };
 
-     const Variants2 = {
+  const Variants2 = {
     visible: { x: 0, y: 0, scale: 1, opacity: 1, transition: { duration: 1 } },
     hidden: { x: 120, y: 0, scale: 1, opacity: 0 },
   };
@@ -87,7 +82,7 @@ const Contact = () => {
       </motion.div>
     );
   }
-  
+
   function RightSection() {
     const controls = useAnimation();
     const [refHeading, inView] = useInView();
@@ -105,172 +100,171 @@ const Contact = () => {
         animate={controls}
         variants={Variants2}
       >
-       <Formik
-        initialValues={formInitialValues}
-        validate={(values) => {
-          const errors: any = {};
-          if (!values.fName) {
-            errors.fName = "First Name is Required";
-          } else if (!/^[A-Za-z]{3,30}$/.test(values.fName)) {
-            errors.fName =
-              "First Name should not contain special characters or numbers.";
-          }
-
-          if (!values.lName) {
-            errors.lName = "Last Name is Required";
-          } else if (!/^[A-Za-z]{3,30}$/.test(values.lName)) {
-            errors.lName =
-              "Last Name should not contain special characters or numbers.";
-          }
-
-          if (
-            values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-          ) {
-            errors.email = "Invalid email address";
-          }
-
-          if (!values.mobile) {
-            errors.mobile = "Mobile is Required";
-          } else if (!/^[1-9][0-9]{9}$/i.test(values.mobile)) {
-            errors.mobile = "Invalid mobile number provided";
-          }
-
-          if (!values.message) {
-            errors.message = "Message is Required";
-          }
-          return errors;
-        }}
-        onSubmit={(values, { setSubmitting, resetForm }) => {
-          setSubmitting(false);
-          if (isVerified) {
-            // alert('Successfully Verified')
-            // alert(JSON.stringify(values, null, 2));
-            try {
-              sendMessageEmail(JSON.stringify(values))
-              .then(()=>{
-                alert("Message Successfully Sent");
-              })
-              .catch((err: any)=>{
-                throw new Error(err)
-              })
-              // grecaptcha.reset();
-            } catch (err) {
-              alert("Form submit unsuccessful" + (err as Error).message);
+        <Formik
+          initialValues={formInitialValues}
+          validate={(values) => {
+            const errors: any = {};
+            if (!values.fName) {
+              errors.fName = "First Name is Required";
+            } else if (!/^[A-Za-z]{3,30}$/.test(values.fName)) {
+              errors.fName =
+                "First Name should not contain special characters or numbers.";
             }
-            resetForm();
-            resetCaptcha();
-            
-          } else {
-            alert("Invalid Captcha");
-          }
-        }}
-      >
-        {({
-          values,
-          isSubmitting,
-          isValid,
-          errors,
-          touched,
-          setFieldValue,
-        }) => (
-          <div className={`w-[90%] md:w-full flex justify-center items-center`}>
-            <Form className={`w-[90%] md:w-full`}>
-              <div className="form-group row py-sm-1 px-sm-3">
-                <label className={styles.label} htmlFor="fName">
-                  First Name<span className={styles.errorMsg}>*</span>
-                </label>
-                <Field
-                  className={`${styles.field} ${
-                    touched.fName && errors.fName ? "is-invalid" : ""
-                  }`}
-                  type="text"
-                  name="fName"
-                  placeholder="First Name"
-                />
-                <ErrorMessage
-                  name="fName"
-                  component="span"
-                  className={styles.errorMsg}
-                />
-              </div>
-              <div className="form-group row py-sm-1 px-sm-3">
-                <label className={styles.label} htmlFor="lName">
-                  Last Name<span className={styles.errorMsg}>*</span>
-                </label>
-                <Field
-                  className={`${styles.field} ${
-                    touched.lName && errors.lName ? "is-invalid" : ""
-                  }`}
-                  type="text"
-                  name="lName"
-                  placeholder="Last Name"
-                />
-                <ErrorMessage
-                  name="lName"
-                  component="span"
-                  className={styles.errorMsg}
-                />
-              </div>
-              <div className="form-group row py-sm-2 px-sm-3">
-                <label className={styles.label} htmlFor="email">
-                  Email<span className={styles.errorMsg}>*</span>
-                </label>
-                <Field
-                  className={`${styles.field} ${
-                    touched.email && errors.email ? "is-invalid" : ""
-                  }`}
-                  type="text"
-                  name="email"
-                  placeholder="Email (Optional)"
+
+            if (!values.lName) {
+              errors.lName = "Last Name is Required";
+            } else if (!/^[A-Za-z]{3,30}$/.test(values.lName)) {
+              errors.lName =
+                "Last Name should not contain special characters or numbers.";
+            }
+
+            if (
+              values.email &&
+              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+            ) {
+              errors.email = "Invalid email address";
+            }
+
+            if (!values.mobile) {
+              errors.mobile = "Mobile is Required";
+            } else if (!/^[1-9][0-9]{9}$/i.test(values.mobile)) {
+              errors.mobile = "Invalid mobile number provided";
+            }
+
+            if (!values.message) {
+              errors.message = "Message is Required";
+            }
+            return errors;
+          }}
+          onSubmit={(values, { setSubmitting, resetForm }) => {
+            setSubmitting(false);
+            if (isVerified) {
+              // alert('Successfully Verified')
+              // alert(JSON.stringify(values, null, 2));
+              try {
+                sendMessageEmail(JSON.stringify(values))
+                  .then(() => {
+                    alert("Message Successfully Sent");
+                  })
+                  .catch((err: any) => {
+                    throw new Error(err);
+                  });
+                // grecaptcha.reset();
+              } catch (err) {
+                alert("Form submit unsuccessful" + (err as Error).message);
+              }
+              resetForm();
+              resetCaptcha();
+            } else {
+              alert("Invalid Captcha");
+            }
+          }}
+        >
+          {({
+            values,
+            isSubmitting,
+            isValid,
+            errors,
+            touched,
+            setFieldValue,
+          }) => (
+            <div
+              className={`w-[90%] md:w-full flex justify-center items-center`}
+            >
+              <Form className={`w-[90%] md:w-full`}>
+                <div className="form-group row py-sm-1 px-sm-3">
+                  <label className={styles.label} htmlFor="fName">
+                    First Name<span className={styles.errorMsg}>*</span>
+                  </label>
+                  <Field
+                    className={`${styles.field} ${
+                      touched.fName && errors.fName ? "is-invalid" : ""
+                    }`}
+                    type="text"
+                    name="fName"
+                    placeholder="First Name"
+                  />
+                  <ErrorMessage
+                    name="fName"
+                    component="span"
+                    className={styles.errorMsg}
+                  />
+                </div>
+                <div className="form-group row py-sm-1 px-sm-3">
+                  <label className={styles.label} htmlFor="lName">
+                    Last Name<span className={styles.errorMsg}>*</span>
+                  </label>
+                  <Field
+                    className={`${styles.field} ${
+                      touched.lName && errors.lName ? "is-invalid" : ""
+                    }`}
+                    type="text"
+                    name="lName"
+                    placeholder="Last Name"
+                  />
+                  <ErrorMessage
+                    name="lName"
+                    component="span"
+                    className={styles.errorMsg}
+                  />
+                </div>
+                <div className="form-group row py-sm-2 px-sm-3">
+                  <label className={styles.label} htmlFor="email">
+                    Email<span className={styles.errorMsg}>*</span>
+                  </label>
+                  <Field
+                    className={`${styles.field} ${
+                      touched.email && errors.email ? "is-invalid" : ""
+                    }`}
+                    type="text"
+                    name="email"
+                    placeholder="Email (Optional)"
+                  />
+
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className={styles.errorMsg}
+                  />
+                </div>
+                <div className="form-group row py-sm-2 px-sm-3">
+                  <label className={styles.label} htmlFor="mobile">
+                    Mobile<span className={styles.errorMsg}>*</span>
+                  </label>
+                  <Field
+                    className={`${styles.field} ${
+                      touched.mobile && errors.mobile ? "is-invalid" : ""
+                    } `}
+                    type="text"
+                    rows="4"
+                    name="mobile"
+                    placeholder="Mobile"
+                  />
+
+                  <ErrorMessage
+                    name="mobile"
+                    component="div"
+                    className={styles.errorMsg}
+                  />
+                </div>
+
+                <MyTextArea
+                  label="Message"
+                  name="message"
+                  rows="6"
+                  placeholder="Enter your message here"
+                  className={`${styles.textarea}`}
                 />
 
                 <ErrorMessage
-                  name="email"
-                  component="div"
-                  className={styles.errorMsg}
-                />
-              </div>
-              <div className="form-group row py-sm-2 px-sm-3">
-                <label className={styles.label} htmlFor="mobile">
-                  Mobile<span className={styles.errorMsg}>*</span>
-                </label>
-                <Field
-                  className={`${styles.field} ${
-                    touched.mobile && errors.mobile ? "is-invalid" : ""
-                  } `}
-                  type="text"
-                  rows="4"
-                  name="mobile"
-                  placeholder="Mobile"
-                />
-
-                <ErrorMessage
-                  name="mobile"
-                  component="div"
-                  className={styles.errorMsg}
-                />
-              </div>
-
-              <MyTextArea
-                label="Message"
-                name="message"
-                rows="6"
-                placeholder="Enter your message here"
-                className={`${styles.textarea}`}
-               
-              />
-              
-              <ErrorMessage
                   name="message"
                   component="div"
                   className={styles.errorMsg}
                 />
 
-                  <div>
-
-
-{/* SYNTAX 1 - USE REF  */}
-              {/* <ReCAPTCHA
+                <div>
+                  {/* SYNTAX 1 - USE REF  */}
+                  {/* <ReCAPTCHA
 
                 ref = {capRef}
                 className="my-10"
@@ -278,22 +272,20 @@ const Contact = () => {
                 verifyCallback={onChange}
           
               /> */}
-{/* SYNTAX -2  */}
-        {/* @ts-ignore */}
-        <ReCAPTCHA
+                  {/* SYNTAX -2  */}
+                  {/* @ts-ignore */}
+                  <ReCAPTCHA
+                    ref={(e: any) => (recaptchaInstance = e)}
+                    className="my-10"
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    verifyCallback={onChange}
+                  />
+                </div>
 
-                ref = {(e : any)=>recaptchaInstance = e}
-                className="my-10"
-                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                verifyCallback={onChange}
-          
-              />
-                  </div>
-              
-              {/* 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI is for testing only , create one for your own site  */}
+                {/* 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI is for testing only , create one for your own site  */}
 
-              <div className=" flex justify-center flex-wrap items-center p-4 border-t border-gray-200 rounded-b-md">
-                {/* <button
+                <div className=" flex justify-center flex-wrap items-center p-4 border-t border-gray-200 rounded-b-md">
+                  {/* <button
                   type="submit"
                   className="px-6
                   py-2.5
@@ -328,31 +320,31 @@ const Contact = () => {
                   </div>
                 </button>
                 */}
-              
-              <Button type="submit">
-              <div className="flex flex-row gap-1">
-                    {" "}
-                    SEND <FiSend />
-                  </div>
-              </Button>
-                </div> 
-            </Form>
-          </div>
-        )}
-      </Formik>
+
+                  <Button type="submit">
+                    <div className="flex flex-row gap-1">
+                      {" "}
+                      SEND <FiSend />
+                    </div>
+                  </Button>
+                </div>
+              </Form>
+            </div>
+          )}
+        </Formik>
       </motion.div>
     );
   }
 
-  const capRef = useRef<any>(null)
+  const capRef = useRef<any>(null);
   const [isVerified, setVerified] = useState(false);
   function onChange(response: any) {
     if (response) {
       setVerified(true);
     }
   }
- 
-  let recaptchaInstance:any;
+
+  let recaptchaInstance: any;
 
   const formInitialValues = {
     fName: "",
@@ -362,19 +354,19 @@ const Contact = () => {
     message: "",
   };
 
-  const resetCaptcha = ()=>{
-    // capRef.current.reset(); // syntax -1 
-   recaptchaInstance.reset(); // syntax -2
-  }
-  const captchaSubmit= (e:any)=>{
+  const resetCaptcha = () => {
+    // capRef.current.reset(); // syntax -1
+    recaptchaInstance.reset(); // syntax -2
+  };
+  const captchaSubmit = (e: any) => {
     e.preventDefault();
     // document.getElementById("demo-form").submit();
-    
-  }
+  };
   return (
-    
-
-    <div id="contact" className=" w-[90%] overflow-x-hidden mx-auto flex pt-10 flex-col md:flex-row md:justify-center md:items-center justify-center items-center ">
+    <div
+      id="contact"
+      className=" w-[90%] overflow-x-hidden mx-auto flex pt-10 flex-col md:flex-row md:justify-center md:items-center justify-center items-center "
+    >
       {/* <div className="w-[50%] mr-5">
         <h3 className=" font-bold text-center text-softBlue text-4xl md:text-6xl ">
           {" "}
@@ -385,12 +377,9 @@ const Contact = () => {
           Feel Free to Connect
         </p>
       </div> */}
-      <LeftSection/>
-<RightSection/>
-      
+      <LeftSection />
+      <RightSection />
     </div>
-
-
   );
 };
 

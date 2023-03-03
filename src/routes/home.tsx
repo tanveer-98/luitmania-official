@@ -86,7 +86,7 @@ function Home() {
           <Team />
           <Projects />
           <Testimonials />
-          {/* <Blogs/> */}
+          <Blogs/>
           <Faq />
           <NewsLetter />
           <div className="w-full bg-bodyColorMain ">

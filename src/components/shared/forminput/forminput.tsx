@@ -1,6 +1,6 @@
 // import "./forminput.css";
 
-import React from 'react'
+import React , {useMemo} from 'react'
 const FormInput = ({ label, inputOptions } : any) => {
   return (
     <div className='groupInp'>
