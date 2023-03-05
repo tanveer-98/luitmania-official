@@ -23,6 +23,7 @@ import ButtonToTop from "../components/ButtonTop";
 // import SlickCarousel from "../components/MultiCarousel";
 import Blogs from "../components/Blogs";
 import OurLocation from '../components/OurLocation'
+import Parallax from '../components/Parallax'
 function Home() {
   const [count, setCount] = useState(0);
   //   let m = import.meta.env.VITE_CI ?? true;
@@ -79,6 +80,7 @@ function Home() {
     <>
       {!maintenance ? (
         <div>
+          <Parallax/>
           <Navbar />
           <AnimatedBG />
           <Services />
@@ -89,7 +91,7 @@ function Home() {
           <Blogs/>
           <Faq />
           <NewsLetter />
-          <div className="w-full bg-bodyColorMain ">
+          <div className="w-full bg-mainMenu">
             <Contact />
           </div>
           <div

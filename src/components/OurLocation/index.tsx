@@ -90,12 +90,11 @@ const OurLocation = () => {
   };
 
   return (
-    <section id="projects" className="pt-16 bg-mainMenu ">
+    <section id="projects" className="pt-16 bg-bodyColorMain">
       <Heading
         styles="mb-16 sub-title uppercase text-white font-bold  text-2xl text-center md:text-3xl"
         content="Let's MeetUp for something New"
       />
-
       <Location />
     </section>
   );
