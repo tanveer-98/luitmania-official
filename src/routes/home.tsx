@@ -22,15 +22,15 @@ import ButtonToTop from "../components/ButtonTop";
 // import CardSlider from "../components/CardSlider";
 // import SlickCarousel from "../components/MultiCarousel";
 import Blogs from "../components/Blogs";
-import OurLocation from '../components/OurLocation'
-import Parallax from '../components/Parallax'
+import OurLocation from "../components/OurLocation";
+import Parallax from "../components/Parallax";
 function Home() {
   const [count, setCount] = useState(0);
   //   let m = import.meta.env.VITE_CI ?? true;
   const [maintenance, setMaintenance] = useState(
     import.meta.env.VITE_MAINTENANCE === "true"
-    // true 
-    );
+    // true
+  );
   // console.log(import.meta.env.VITE_MAINTENANCE, maintenance)
   const [show, setShow] = useState(false);
   const options = {
@@ -80,15 +80,16 @@ function Home() {
     <>
       {!maintenance ? (
         <div>
-          <Parallax/>
+          {/* <Parallax/> */}
           <Navbar />
+         
           <AnimatedBG />
           <Services />
           <AboutUs />
           <Team />
           <Projects />
           <Testimonials />
-          <Blogs/>
+          <Blogs />
           <Faq />
           <NewsLetter />
           <div className="w-full bg-mainMenu">
@@ -124,9 +125,8 @@ function Home() {
               }
             />
           </div>
-          <OurLocation/>
+          <OurLocation />
           <Footer />
-        
         </div>
       ) : (
         <Maintainence />

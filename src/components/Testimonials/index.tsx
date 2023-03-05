@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import TestimonialJSON from "./testimonials.json";
 import TestimonialCard from "../TestimonialCard";
 import MultiCarousel from "../MultiCarousel";
+import { MouseParallaxChild, MouseParallaxContainer } from "react-parallax-mouse";
 
 const Testimonials = () => {
   interface IProject {
@@ -57,7 +58,7 @@ const Testimonials = () => {
     }, [controls, inView]);
     return (
       <motion.div
-        className="h-full w-full relative z-2"
+        className="h-full w-full relative z-2 flex items-center justify-center"
         ref={ref}
         initial="hidden"
         animate={controls}
@@ -118,13 +119,35 @@ const Testimonials = () => {
         />
       </div> */}
 
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full flex justify-center itmes-center">
         <div className="absolute inset-0 z-0">
+        <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
+  <MouseParallaxChild factorX={0.3} factorY={0.5}>
+  <img src="circle.png" className="circle-4" />
+  </MouseParallaxChild>
+  <MouseParallaxChild factorX={0.7} factorY={0.8}>
+  <img src="circle.png" className="circle-1"/>
+  </MouseParallaxChild>
+  <MouseParallaxChild factorX={0.7} factorY={0.8}>
+  <img src="circle.png" className="circle-3" />
+  </MouseParallaxChild>
+  <MouseParallaxChild factorX={0.7} factorY={0.8}
+   style = {{
+    position: "absolute",
+    top : "100px",
+    right : "100px",
+    zIndex : 0
+   }}
+   className= "absolute top-0 left-0 z-0"
+   >
+  <img src="circle.png" className="circle-5" />
+  </MouseParallaxChild>
+</MouseParallaxContainer>
           <img src="circle.png" className="circle-4" />
           <img src="circle.png" className="circle-1"/>
-          {/* <img src="circle.png" className="circle-2"/> */}
+          <img src="circle.png" className="circle-2"/>
           <img src="circle.png" className="circle-3" />
-          <img src="circle.png" className="circle-5" />
+          <img src="circle.png" className="circle-5" /> 
         </div>
         <Carousel />
       </div>
