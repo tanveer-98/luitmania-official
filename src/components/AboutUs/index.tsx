@@ -21,7 +21,7 @@ const AboutUs = () => {
     }, [controls, inView]);
     return (
       <motion.h2
-        className="mb-6 text-4xl font-semibold text-center text-white"
+        className="mb-6 text-2xl md:text-3xl font-semibold text-center text-white"
         ref={refHeading}
         initial="hidden"
         animate={controls}

@@ -120,14 +120,6 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="aboutus"
-            smooth={true}
-            offset={-120}
-            className="  nav-link tracking-tight hover:text-gray-400 cursor-pointer"
-          >
-            About us
-          </Link>
-          <Link
             to="services"
             smooth={true}
             offset={-120}
@@ -140,6 +132,14 @@ const Navbar = () => {
            
           >
             Services
+          </Link>
+          <Link
+            to="aboutus"
+            smooth={true}
+            offset={-120}
+            className="  nav-link tracking-tight hover:text-gray-400 cursor-pointer"
+          >
+            About us
           </Link>
           <Link
             to="projects"
@@ -230,17 +230,6 @@ const Navbar = () => {
             Home
           </Link>
         </div>
-        <div className=" mobile-nav-link  w-full py-3 text-left pl-2 ">
-          <Link
-            to="aboutus"
-            smooth={true}
-            offset={-120}
-            onClick={toggleHam}
-            className="  tracking-tight "
-          >
-            About Us
-          </Link>
-        </div>{" "}
         <div className="mobile-nav-link  w-full py-3 text-left pl-2  ">
           <Link
             to="services"
@@ -250,6 +239,17 @@ const Navbar = () => {
             className="  tracking-tight "
           >
             Services
+          </Link>
+        </div>{" "}
+        <div className=" mobile-nav-link  w-full py-3 text-left pl-2 ">
+          <Link
+            to="aboutus"
+            smooth={true}
+            offset={-120}
+            onClick={toggleHam}
+            className="  tracking-tight "
+          >
+            About Us
           </Link>
         </div>{" "}
         <div className="mobile-nav-link  w-full py-3 text-left pl-2  ">

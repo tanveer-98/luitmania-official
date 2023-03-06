@@ -595,3 +595,9 @@ body {
   height: 2px;
   background-color: white ;
 }
+
+
+/* FAQ sections */
+.faq-sections:nth-last-child(){
+    padding-bottom: 24px;
+}
