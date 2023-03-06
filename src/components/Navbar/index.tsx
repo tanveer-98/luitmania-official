@@ -302,9 +302,9 @@ const Navbar = () => {
       </div>
       <div
         id="pbar"
-        className="relative mb-6 h-1 w-0 bg-neutral-200 dark:bg-neutral-600"
+        className="relative mb-6 h-1 w-0 bg-green-500 dark:bg-neutral-600"
       >
-        <div className="h-1 bg-green-500" style={{ width: "50%" }}></div>
+        {/* <div className="h-1 bg-green-500" style={{ width: "50%" }}></div> */}
       </div>
     </nav>
   );
