@@ -35,7 +35,7 @@ const MultiCarousel = ({children  , data}:any) => {
   const styles = {
     carousal_container:"flex justify-center items-center my-12"
   }
-  console.log("data" + data)
+  // console.log("data" + data)
   return (
     // <div className="flex justify-center items-center">
     <Carousel responsive={responsive}

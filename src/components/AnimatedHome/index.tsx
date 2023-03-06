@@ -7,8 +7,8 @@ import Wave from '../CssWave'
 import NeonButton from '../Neonbutton/neonbutton'
 const AnimatedHero = () => {
   return (
-    <div id="Ahero" className="a_hero">
-    <div className="wrapper mt-15 pt-12 md:pt-0 flex justify-center items-center">
+    <section id="Ahero" className="a_hero">
+    <div className="relative wrapper mt-15 pt-12 md:pt-0 flex justify-center items-center">
         {/* <h2 className="wrapper__h2">Animated Background</h2> */}
         <div className="box">
             <div></div>
@@ -56,7 +56,7 @@ const AnimatedHero = () => {
     </div>
     
     <Wave/>
-    </div>
+    </section>
   )
 }
 

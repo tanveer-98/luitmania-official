@@ -39,10 +39,48 @@ const Navbar = () => {
     document.getElementById("pbar")!.style.width = scrolled + "%";
   }
 
-  window.onscroll = function () {
+  // window.onscroll = function () {
+    
+  // };
+
+   // Nav bar active on scroll 
+
+   const sections = document.querySelectorAll('section');
+   const navLinks = document.querySelectorAll("nav-link");
+   console.log("NavLinks");
+   console.log(navLinks);
+
+
+
+  window.onscroll = () => {
     progressBar();
-  };
-  return (
+    var current : string | null = "";
+
+    sections.forEach((section)=>{
+      //get section top Pixel 
+      const sectionTop = section.offsetTop; 
+      if(window.scrollY >= sectionTop){
+        current  = section.getAttribute('id')
+
+      }
+    })
+    // console.log("CURRENT"+ current)
+    // console.log(navLinks)
+    navLinks.forEach((element)=>{
+      // console.log("LI");
+      // console.log(element)
+      element.classList.remove('nav-link-active');
+      if(current && element.classList.contains(current)){
+          element.classList.add('nav-link-active')
+      }
+    })
+  }
+
+  const handleSetActive  = (to:any) =>{
+    console.log(to);
+  }
+
+   return (
     <nav
       className={`fixed py-2 left-0 top-0 backdrop-blur-lg  transition-all duration-300 ease-linear z-20 ${
         scrollReached ? "bg-bodyColorMain" : "bg-transparent"
@@ -70,10 +108,14 @@ const Navbar = () => {
           } md:flex`}
         >
           <Link
-            to="hero"
+            to="Ahero"
             smooth={true}
             offset={0}
-            className="  tracking-tight hover:text-white  cursor-pointer"
+            className=" nav-link tracking-tight hover:text-gray-400  cursor-pointer"
+            activeClass = "bg-white"
+            activeStyle={{
+              backgroundColor : "white"
+            }}
           >
             Home
           </Link>
@@ -81,7 +123,7 @@ const Navbar = () => {
             to="aboutus"
             smooth={true}
             offset={-120}
-            className="  tracking-tight hover:text-white cursor-pointer"
+            className="  nav-link tracking-tight hover:text-gray-400 cursor-pointer"
           >
             About us
           </Link>
@@ -89,7 +131,13 @@ const Navbar = () => {
             to="services"
             smooth={true}
             offset={-120}
-            className="  tracking-tight hover:text-white cursor-pointer"
+            className="   tracking-tight hover:text-gray-400 cursor-pointer"
+            activeClass = "nav-link-active"
+            activeStyle ={{
+              backgroundColor : "white",
+              color : 'red'
+            }}
+           
           >
             Services
           </Link>
@@ -97,7 +145,7 @@ const Navbar = () => {
             to="projects"
             smooth={true}
             offset={-120}
-            className="  tracking-tight hover:text-white cursor-pointer"
+            className="  nav-link tracking-tight hover:text-gray-400 cursor-pointer"
           >
             Projects
           </Link>
@@ -105,7 +153,7 @@ const Navbar = () => {
             to="faq"
             smooth={true}
             offset={-120}
-            className="  tracking-tight hover:text-white cursor-pointer"
+            className=" nav-link  tracking-tight hover:text-gray-400 cursor-pointer"
           >
             FAQ
           </Link>
@@ -114,7 +162,7 @@ const Navbar = () => {
               to="newsletter"
               smooth={true}
               offset={-120}
-              className="  tracking-tight  hover:text-white cursor-pointer"
+              className="  nav-link tracking-tight  hover:text-gray-400 cursor-pointer"
             >
               NewsLetter
             </Link>
@@ -124,7 +172,7 @@ const Navbar = () => {
               to="contactus"
               smooth={true}
               offset={-80}
-              className=" tracking-tight hover:text-white cursor-pointer"
+              className=" nav-link tracking-tight hover:text-gray-400 cursor-pointer"
             >
               Contact Us
             </Link>

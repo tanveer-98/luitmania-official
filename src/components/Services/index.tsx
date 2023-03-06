@@ -33,7 +33,7 @@ const Services = () => {
     );
   }
   return (
-    <div className=" bg-mainMenu">
+    <section id="services" className=" bg-mainMenu">
       <Heading
         styles="mb-2 pt-12 uppercase text-[color:var(--main-text-color)]  text-2xl text-center md:text-3xl"
         content="Our Services"
@@ -48,7 +48,7 @@ const Services = () => {
           {SERVICES.map((data: any, idx: number) => <GlassCard colors={data.color} heading= {data.heading} />)}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

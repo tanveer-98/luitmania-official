@@ -12,7 +12,7 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact/contact";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import AnimatedBG from "../components/AnimatedBG";
+import AnimatedBG from "../components/AnimatedHome";
 import HoverCard from "../components/HoverCard";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
@@ -24,6 +24,9 @@ import ButtonToTop from "../components/ButtonTop";
 import Blogs from "../components/Blogs";
 import OurLocation from "../components/OurLocation";
 import Parallax from "../components/Parallax";
+import AnimatedFooter from '../components/AnimatedFooter';
+
+
 function Home() {
   const [count, setCount] = useState(0);
   //   let m = import.meta.env.VITE_CI ?? true;
@@ -76,6 +79,10 @@ function Home() {
     });
   }, []);
 
+ 
+
+
+
   return (
     <>
       {!maintenance ? (
@@ -126,7 +133,8 @@ function Home() {
             />
           </div>
           <OurLocation />
-          <Footer />
+          {/* <Footer /> */}
+          <AnimatedFooter/>
         </div>
       ) : (
         <Maintainence />

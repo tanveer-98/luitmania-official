@@ -12,7 +12,7 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact/contact";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import AnimatedBG from "../components/AnimatedBG";
+import AnimatedBG from "../components/AnimatedHome";
 import HoverCard from "../components/HoverCard";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
@@ -21,7 +21,7 @@ import Maintainence from "../components/Maintainence";
 import ButtonToTop from "../components/ButtonTop";
 // import CardSlider from "../components/CardSlider";
 import SlickCarousel from "../components/MultiCarousel";
-import AdminAnimatedBG from "../components/AdminAnimatedBG";
+import AdminAnimatedBG from "../components/AdminAnimatedHome";
 
 import testimonialsImage from "/blog.png"
 import { Route, Routes } from "react-router-dom";

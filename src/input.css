@@ -194,6 +194,7 @@ font-family: 'Varela Round', sans-serif;
  border-radius: 50px;
  background-color: white;
 }
+
 body {
   overflow-x: hidden;
   font-family: 'Varela Round', sans-serif;
@@ -384,9 +385,15 @@ body {
   opacity: 0;
 }
 
-.nav-link a {
+/* .nav-link a {
   display: block;
+  background-color: white;
   padding: 2rem 0;
+} */
+.nav-link-active{
+  background-color : white ; 
+  border-radius: 20px;
+  padding : 4px 10px; 
 }
 .mobile-nav {
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -525,7 +532,7 @@ body {
   height: 100%;
   width: 100%;
   mix-blend-mode:screen;
- position: absolute;
+  position: absolute;
 }
 
 
@@ -577,4 +584,14 @@ body {
     background: linear-gradient(0deg , white 0% , black 100%);
     visibility: hidden;
   }
+}
+
+
+.seperator {
+  content : "";
+  margin-top : 20px;
+  position: relative;
+  width: 80%;
+  height: 2px;
+  background-color: white ;
 }
