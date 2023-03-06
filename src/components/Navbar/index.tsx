@@ -27,18 +27,22 @@ const Navbar = () => {
   }
   window.addEventListener("scroll", check);
 
-  // Progress Bar Scroll Animation 
+  // Progress Bar Scroll Animation
 
-  function progressBar(){
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  function progressBar() {
+    let winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    let height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
     let scrolled = (winScroll / height) * 100;
     document.getElementById("pbar")!.style.width = scrolled + "%";
   }
 
-  window.onscroll  = function(){progressBar()}
+  window.onscroll = function () {
+    progressBar();
+  };
   return (
-   
     <nav
       className={`fixed py-2 left-0 top-0 backdrop-blur-lg  transition-all duration-300 ease-linear z-20 ${
         scrollReached ? "bg-bodyColorMain" : "bg-transparent"
@@ -55,10 +59,9 @@ const Navbar = () => {
             id="logo"
             className="w-[200px] "
           /> */}
-         <h2 className= " logo text-white ml-6 tracking-widest text-3xl text-center">
-
-          LuitoMania
-         </h2>
+          <h2 className=" logo text-white ml-6 tracking-widest text-3xl text-center">
+            LuitoMania
+          </h2>
         </div>
         {/* <!-- Menu Items --> */}
         <div
@@ -249,9 +252,12 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div id="pbar" className="relative mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
-            <div className="h-1 bg-green-500" style={{ width: "50%" }}></div>
-          </div>
+      <div
+        id="pbar"
+        className="relative mb-6 h-1 w-0 bg-neutral-200 dark:bg-neutral-600"
+      >
+        <div className="h-1 bg-green-500" style={{ width: "50%" }}></div>
+      </div>
     </nav>
   );
 };

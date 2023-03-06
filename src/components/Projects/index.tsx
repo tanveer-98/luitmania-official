@@ -98,7 +98,7 @@ const Projects = () => {
     }, [controls, inView]);
     return (
       <motion.div
-        className="h-full w-full"
+        className="h-full w-full flex items-center justify-center"
         ref={ref}
         initial="hidden"
         animate={controls}
@@ -154,7 +154,10 @@ const Projects = () => {
       </div>
 
       {/* Mobile Carousel */}
+      <div className="flex justify-center">
+
       <Carousel />
+      </div>
     </section>
   );
 };

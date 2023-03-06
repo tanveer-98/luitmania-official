@@ -120,7 +120,7 @@ const Testimonials = () => {
       </div> */}
 
       <div className="relative w-full h-full flex justify-center itmes-center">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 overflow-hidden">
         <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
   <MouseParallaxChild factorX={0.3} factorY={0.5}>
   <img src="circle.png" className="circle-4" />
