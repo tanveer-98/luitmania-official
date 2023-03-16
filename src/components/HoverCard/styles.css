@@ -27,7 +27,7 @@
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 
   transition: 0.3s ease-in-out;
-  border-radius: 15px;
+  border-radius: 0px 0px 10px 10px;
 }
 .hovercard_card:hover {
   height: 320px;
@@ -40,13 +40,14 @@
   top: -40%;
   /* left: 8px; */
   z-index: 1;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); */
   /* background-color: black; */
 }
 
 .hovercard_image_img {
-  border-radius: 50px;
+  /* border-radius: 50px; */
+  border-radius:  10px 10px 0px 0px;
   max-width: 100%;
   background-repeat: no-repeat;
   background-size: cover;

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import TestimonialJSON from "./testimonials.json";
-import TestimonialCard from "../TestimonialCard";
+import TestimonialCard from "../TestimonialCard2";
 import MultiCarousel from "../MultiCarousel";
 import { MouseParallaxChild, MouseParallaxContainer } from "react-parallax-mouse";
 
