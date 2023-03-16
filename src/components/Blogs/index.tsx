@@ -23,6 +23,15 @@ const Blogs = () => {
             />
           ))}
         </div>
+        <div className="w-full h-full flex justify-center items-center mt-10">
+        <button
+          className=" button-inner-shadow text-sm border-green-300 transition-all duration-500 ease-in-out bg-transparent hover:bg-green-400 rounded-md  border-2
+            w-[100px] h-[40px]  text-white uppercase tracking-tight"
+        >
+          {" "}
+          More 
+        </button>
+        </div>
       </div>
     </section>
   );
