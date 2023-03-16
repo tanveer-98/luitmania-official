@@ -1,42 +1,63 @@
-import React from 'react'
-interface IBlogCard{
-    imgSource : string ; 
-    title : string ; 
-    content : string ; 
-    writerImg : string; 
-    date: string; 
-    writtenBy : string ; 
-
+import React from "react";
+interface IBlogCard {
+  imgSource: string;
+  title: string;
+  content: string;
+  writerImg: string;
+  date: string;
+  writtenBy: string;
 }
 const BlogCard = ({
-    imgSource ="https://picsum.photos/200/300", title ="just a title ", content="No content"
-    , writtenBy ="Chinmoy Talukdar",
-    date  = "14 Aug 2022",
-    writerImg ="https://google.com"
-    
-}:IBlogCard) => {
+  imgSource = "https://picsum.photos/200/300",
+  title = "just a title ",
+  content = "No content",
+  writtenBy = "Chinmoy Talukdar",
+  date = "16 Mar 2023",
+  writerImg = "https://google.com",
+}: IBlogCard) => {
   return (
-    <div className="max-w-sm w-full lg:max-w-full lg:flex">
-    <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style={{backgroundImage: "../../assets/background.jpg')"}} title="Woman holding a mug">
-    </div>
-    <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-      <div className="mb-8">
-        <p className="text-sm text-gray-600 flex items-center">
-          
-        </p>
-        <div className="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-        <p className="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+    <div className=" min-w-[230px] max-w-[315px]">
+      <div className="overflow-hidden relative">
+        <img
+          src="background.jpg"
+          className="h-48 w-full cursor-pointer transition-all duration-300 ease-in-out hover:scale-110   flex-none  rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden bg-contain"
+          title="Woman holding a mug"
+        />
+        <button
+          className=" button-inner-shadow text-sm border-green-300 transition-all duration-500 ease-in-out bg-transparent hover:bg-green-400 rounded-md  border-2
+          absolute top-2 right-2 w-[100px] h-[40px]  text-white uppercase tracking-tight"
+        >
+          {" "}
+          read more
+        </button>
       </div>
-      <div className="flex items-center">
-        <img className="w-10 h-10 rounded-full mr-4" src="/img/jonathan.jpg" alt="Avatar of Jonathan Reinink"/>
-        <div className="text-sm">
-          <p className="text-gray-900 leading-none">{
-          writtenBy}</p>
-          <p className="text-gray-600">{date}</p>
+
+      <div className="bg-[#141414] h-[200px]
+  rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+        <div className="mb-8">
+          <p className="text-sm text-white  flex items-center"></p>
+          <div className="font-roboto text-white font-bold text-xl mb-2">
+            {title}
+          </div>
+          <p className="text-gray-500 text-base truncate overflow-hidden">
+            {content}
+          </p>
+        </div>
+
+        <div className="flex items-center">
+          <img
+            className="w-10 h-10 rounded-full mr-4"
+            src="chinmoy.jpg"
+            alt="Chinmoy Talukdar Image"
+          />
+          <div className="text-sm">
+            <p className="text-white leading-none">{writtenBy}</p>
+            <p className="text-gray-600">{date}</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>)
-}
+  );
+};
 
-export default BlogCard
+export default BlogCard;
