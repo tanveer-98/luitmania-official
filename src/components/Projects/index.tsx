@@ -125,11 +125,6 @@ const Projects = () => {
   return (
     <section id="projects" className="py-16 bg-bgcolormain ">
 
-    <div className="flex justify-center">
-
-     <div className="divider"></div>
-    </div>
-      
       <Heading
         styles="mb-2 uppercase title text-white font-bold  text-2xl text-center md:text-3xl"
         content="Our Projects"
