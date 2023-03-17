@@ -90,7 +90,7 @@ const OurLocation = () => {
   };
 
   return (
-    <section id="projects" className="pt-16 pb-24 bg-bodyColorMain">
+    <section id="projects" className="pt-16 pb-24 bg-bgcolormain">
       <Heading
         styles="mb-16 sub-title uppercase text-white font-bold  text-2xl text-center md:text-3xl"
         content="Let's MeetUp for something New"

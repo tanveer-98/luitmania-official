@@ -21,7 +21,7 @@ const AboutUs = () => {
     }, [controls, inView]);
     return (
       <motion.h2
-        className="mb-6 text-2xl md:text-3xl font-semibold text-center text-white"
+        className="mb-2 pt-12 uppercase text-[color:var(--main-text-color)]  text-2xl text-center md:text-3xl"
         ref={refHeading}
         initial="hidden"
         animate={controls}
@@ -42,7 +42,7 @@ const AboutUs = () => {
     }, [controls, inView]);
     return (
       <motion.p
-        className="max-w-md mx-auto text-center text-grayishBlue"
+        className=" px-10 sub-title mb-6 text-gray-400 text-xl text-center md:text-xl"
         ref={refHeading2}
         initial="hidden"
         animate={controls}
@@ -55,7 +55,7 @@ const AboutUs = () => {
 
   }
   return (
-    <section id="aboutus" className="bg-bodyColorMain">
+    <section id="aboutus" className="bg-bgcolormain">
       <div className="mx-auto  py-12 md:mx-0">
         {/* <h2 className="mb-6 text-4xl font-semibold text-center">About Us</h2> */}
         <Heading/>

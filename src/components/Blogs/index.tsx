@@ -4,12 +4,15 @@ import BLOGJSON from "./Blogs.json";
 const Blogs = () => {
   return (
     <section id="blogs">
-      <div className="overflow-hidden pb-20 w-full h-full flex flex-col justify-center items-center bg-bodyColorMain">
-        <h3 className="blog-header flex justify-center items-center text-2xl md:text-3xl text-gray-200 text-center my-12 ">
+      <div className="overflow-hidden pb-20 w-full h-full flex flex-col justify-center items-center bg-bgcolormain">
+        <h3 className="mb-2 block uppercase text-white font-bold  text-2xl text-center md:text-3xl ">
           {" "}
           <span className="font-bold text-white mr-4  ">Blogs</span>& Articles
         </h3>
  
+        <h3 className=" px-10 sub-title mb-6 text-gray-400 text-xl text-center md:text-xl">
+        Insights and Inspiration: Explore Our Blog and Articles for Expert Perspectives and Valuable Information
+        </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {BLOGJSON.map((element: any, idx: number) => (
             <BlogCard
@@ -29,7 +32,7 @@ const Blogs = () => {
             w-[100px] h-[40px]  text-white uppercase tracking-tight"
         >
           {" "}
-          More 
+          LOAD MORE 
         </button>
         </div>
       </div>

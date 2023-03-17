@@ -236,7 +236,7 @@ const Navbar = () => {
             smooth={true}
             onClick={toggleHam}
             offset={-120}
-            className="  tracking-tight "
+            className=" tracking-tight "
           >
             Services
           </Link>

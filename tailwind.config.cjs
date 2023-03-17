@@ -34,6 +34,7 @@ module.exports = {
         bodyColorMain: "#292929",
         mainMenu: "#383838",
         textFontColor: "#d3d3d3",
+        bgcolormain :"#151617" 
       },
       backgroundImage: {
         // 'footer-texture': "url('/img/footer-texture.png')",
@@ -41,6 +42,7 @@ module.exports = {
         heroBg: "url('/background.jpg')",
         newsLetterBg: "url('/background2.jpg')",
         "gradient-aboutus": "linear-gradient(180deg, #fff 0%, #292929 20%)",
+        "gradient-footer" : "linear-gradient(180deg , #3c3c3c  0% , #383838 100%)"
       },
       spacing: {
         128: "32rem",

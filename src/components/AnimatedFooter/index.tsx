@@ -2,9 +2,9 @@ import React from "react";
 import CssWave2 from "../CssWave2";
 const index = () => {
   return (
-    <div className="w-full h-full relative bg-[#3c3c3c]">
+    <div className="w-full h-full relative bg-bgcolormain">
       <CssWave2 />
-      <footer className="bg-[#3c3c3c] text-center text-white">
+      <footer className="bg-gradient-footer text-center text-white">
         <div className=" px-6 py-2 w-full ">
           <div className=" flex justify-center w-full">
             {/*  */}
@@ -129,8 +129,8 @@ const index = () => {
           <div className="seperator"></div>
         </div>
         <div
-          className="disclaimer p-4 text-center"
-          style={{ backgroundColor: "#3c3c3c" }}
+          className="disclaimer p-4 text-center bg-mainMenu opacity-90"
+          // style={{ backgroundColor: "#3c3c3c" }}
         >
           © 2023 Copyright: All Rights Reserved
           {/* <a className="ml-4 text-blue-600 hover:text-white" href="https://luitomania-official.netlify.app/">

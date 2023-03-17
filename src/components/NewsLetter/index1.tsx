@@ -12,7 +12,7 @@ const NewsLetter = () => {
   }
 
   return (
-    <section id="newsletter" className="newsletter relative bg-mainMenu w-full ">
+    <section id="newsletter" className="newsletter relative bg-bgcolormain w-full ">
 
    
       {/* <div className="max-w-lg mx-auto py-24 mt-20">

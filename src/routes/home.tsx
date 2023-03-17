@@ -79,27 +79,24 @@ function Home() {
     });
   }, []);
 
- 
-
-
-
-  return (
+   return (
     <>
       {!maintenance ? (
         <div>
           {/* <Parallax/> */}
           <Navbar />
-         
           <AnimatedBG />
+       
           <Services />
+          
           <AboutUs />
           <Team />
           <Projects />
           <Testimonials />
           <Blogs />
-          <Faq />
+           <Faq />
           <NewsLetter />
-          <div className="w-full bg-mainMenu">
+          <div className="w-full bg-bgcolormain">
             <Contact />
           </div>
           <div

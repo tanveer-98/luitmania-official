@@ -81,7 +81,7 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="relative -z-1 flex flex-col py-16 bg-mainMenu  justify-center items-center flex-wrap  overflow-hidden  h-full w-full">
+    <div className="relative -z-1 flex flex-col py-16 bg-bgcolormain  justify-center items-center flex-wrap  overflow-hidden  h-full w-full">
       <Heading
         styles="mb-2 block uppercase text-white font-bold  text-2xl text-center md:text-3xl"
         content="Testimonials from our Prestigious Clients"

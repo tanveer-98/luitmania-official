@@ -81,7 +81,7 @@ const NewsLetter = () => {
    )
 
   return (
-    <section id="newsletter" className="newsletter relative bg-bodyColorMain w-full ">
+    <section id="newsletter" className="newsletter relative bg-bgcolormain w-full ">
 
    
       {/* <div className="max-w-lg mx-auto py-24 mt-20">
@@ -103,6 +103,11 @@ const NewsLetter = () => {
            <h2 className="px-3 mb-6 text-3xl font-semibold text-center text-white md:text-4xl">
              Stay up-to-date with what we're doing
            </h2>
+           <h2 className="px-3 mb-6 text-xl text-center text-gray-400 md:text-lg">
+             Subscribe to our newsletter to Stay up-to-date with our latest news and updates
+           </h2>
+
+
            {/* Form */}
            <form
              

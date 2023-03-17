@@ -129,13 +129,13 @@ const Faq = () => {
   }
   return (
     <>
-      <section id="faq" className="bg-mainMenu py-12">
+      <section id="faq" className="bg-bgcolormain py-12">
         <div className="container mx-auto  ">
           <Heading />
           <P1 />
         </div>
       </section>
-      <section id="faq-accordion" className="bg-mainMenu">
+      <section id="faq-accordion" className="bg-bgcolormain">
         {/* Main Container */}
 
         <FAQSection />

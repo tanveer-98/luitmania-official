@@ -47,7 +47,7 @@ const Team = () => {
     }, [controls, inView]);
     return (
       <motion.h2
-        className="mb-6    text-2xl font-semibold text-center md:text-3xl text-white"
+        className="mb-5 pt-12 uppercase text-[color:var(--main-text-color)]  text-2xl text-center md:text-3xl"
         ref={ref}
         initial="hidden"
         animate={controls}
@@ -69,7 +69,7 @@ const Team = () => {
 
     return (
       <motion.div
-        className="bg-bodyColorMain flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
+        className="bg-[color:var(--body-color-main)] flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3"
         ref={refSquare1}
         initial="hidden"
         animate={controls}
@@ -212,7 +212,7 @@ const Team = () => {
     );
   }
   return (
-    <section id="ourTeam" className="bg-mainMenu py-16">
+    <section id="ourTeam" className="bg-bgcolormain py-16">
       <div className="container mx-auto font-semibold text-center md:text-4xl">
         <Heading />
       </div>

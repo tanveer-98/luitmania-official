@@ -25,7 +25,7 @@ const MultiCarousel = ({children  , data}:any) => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 1,
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },

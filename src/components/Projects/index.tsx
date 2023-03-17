@@ -123,17 +123,20 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="py-16 bg-bodyColorMain ">
+    <section id="projects" className="py-16 bg-bgcolormain ">
 
-     
+    <div className="flex justify-center">
+
+     <div className="divider"></div>
+    </div>
       
       <Heading
-        styles="mb-2 uppercase text-white font-bold  text-2xl text-center md:text-3xl"
+        styles="mb-2 uppercase title text-white font-bold  text-2xl text-center md:text-3xl"
         content="Our Projects"
       />
 
       <Heading
-        styles=" px-10 sub-title mb-6 text-[color:var(--main-text-color)] text-xl text-center md:text-[16px]"
+        styles=" px-10 sub-title mb-6 text-gray-400 text-xl text-center md:text-xl"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
       />
 

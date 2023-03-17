@@ -11,6 +11,9 @@
   text-align: left;
   line-height: 1.4em;
   background-color: #141414;
+  /* filter: blur(1px);
+  -webkit-filter: blur(1px); */
+ opacity:95%;
 }
 .circle-1{
     width: 80px;

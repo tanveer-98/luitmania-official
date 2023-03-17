@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import GlassCard from "../GlassCard";
+import GlassCard from "../GlassCard/card2";
 import SERVICES from "./services.json";
 const Services = () => {
   const headingVariants = {
@@ -33,15 +33,15 @@ const Services = () => {
     );
   }
   return (
-    <section id="services" className=" bg-mainMenu">
+    <section id="services" className=" bg-[#151617]">
       <Heading
         styles="mb-2 pt-12 uppercase text-[color:var(--main-text-color)]  text-2xl text-center md:text-3xl"
         content="Our Services"
       />
 
       <Heading
-        styles=" px-10 sub-title mb-6 text-[color:var(--main-text-color)] text-xl text-center md:text-[16px]"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        styles=" px-10 sub-title mb-6 text-gray-400 text-xl text-center md:text-xl"
+        content="With our team of highly skilled and experienced professionals, we are proud to offer a wide range of services that are designed to meet your unique needs and exceed your expectations"
       />
       <div className="flex justify-center items-center h-full ">
         <div className=" my-12 gap-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
