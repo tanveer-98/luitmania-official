@@ -117,7 +117,7 @@ const Projects = () => {
               </div>
             );
           })}
-        </MultiCarousel>
+        </MultiCarousel>        
       </motion.div>
     );
   }

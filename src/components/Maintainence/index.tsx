@@ -23,7 +23,7 @@ const Maintainence = () => {
             src="gear.svg"
             alt=""
           />
-        </div>
+        </div> 
       </div>
       <h1 className="maintenance">Site Under Maintenance</h1>
       <p className="desc">

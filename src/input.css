@@ -41,6 +41,7 @@ font-family: 'Varela Round', sans-serif;
 }
 
 :root{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   --bg-main-color : '#151617'
   --primary-light : '#ffffff'
   --body-font: 'Raleway', Arial, sans-serif;
@@ -193,7 +194,7 @@ font-family: 'Varela Round', sans-serif;
  height: 10px;
  width:  10px;
  border-radius: 50px;
- background-color: white;
+ background-color: rgb(0, 255, 21);
 }
 
 body {
@@ -515,7 +516,8 @@ body {
 
 /* ReadMore button  */
 
-.readmore-button {
+.readmore-button, .readmore-button:focus , .readmore-button:active {
+  outline: none;
   position: relative;
   display: inline-block;
   padding: 8px 16px;
@@ -528,9 +530,10 @@ body {
   transition: 0.2s;
   border-radius: 50px;
   border: 1px solid #21f34f;
+  
 }
 
-.readmore-button:hover{
+.readmore-button:hover {
     color: #255784;
     background: linear-gradient(
       0deg,#61ff7b  0%,  #00fd2a 30%,#00fd2a 60%,
@@ -553,11 +556,11 @@ body {
   margin: 0 auto;
   position: absolute;
   right: 0;
-  bottom: -100%;
+  bottom: -40px;
   background-image: linear-gradient(to right,rgb(255 255 255 / 0),var(--button-bg-color),rgba(0,0,0,0));
   content: "";
   height: 2px;
-  width: 38%;
+  width: 80%;
 
 }
 

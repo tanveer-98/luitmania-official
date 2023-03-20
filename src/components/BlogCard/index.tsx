@@ -11,7 +11,7 @@ const BlogCard = ({
   imgSource = "https://picsum.photos/200/300",
   title = "just a title ",
   content = "No content",
-  writtenBy = "Chinmoy Talukdar",
+  writtenBy = "LuitoMania ",
   date = "16 Mar 2023",
   writerImg = "https://google.com",
 }: IBlogCard) => {
@@ -32,7 +32,7 @@ const BlogCard = ({
         </button>
       </div>
 
-      <div className="bg-[#141414] h-[200px]
+      <div className="bg-[#202020] h-[200px]
   rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div className="mb-8">
           <p className="text-sm text-white  flex items-center"></p>
@@ -45,11 +45,11 @@ const BlogCard = ({
         </div>
 
         <div className="flex items-center">
-          <img
+          {/* <img
             className="w-10 h-10 rounded-full mr-4"
             src="chinmoy.jpg"
             alt="Chinmoy Talukdar Image"
-          />
+          /> */}
           <div className="text-sm">
             <p className="text-white leading-none">{writtenBy}</p>
             <p className="text-gray-600">{date}</p>
