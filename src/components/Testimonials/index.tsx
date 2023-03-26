@@ -143,11 +143,11 @@ const Testimonials = () => {
   <img src="circle.png" className="circle-5" />
   </MouseParallaxChild>
 </MouseParallaxContainer>
-          <img src="circle.png" className="circle-4" />
+          {/* <img src="circle.png" className="circle-4" />
           <img src="circle.png" className="circle-1"/>
           <img src="circle.png" className="circle-2"/>
           <img src="circle.png" className="circle-3" />
-          <img src="circle.png" className="circle-5" /> 
+          <img src="circle.png" className="circle-5" />  */}
         </div>
         <Carousel />
       </div>

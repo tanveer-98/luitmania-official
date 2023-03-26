@@ -90,7 +90,7 @@ function Home() {
           <Services />
           
           <AboutUs />
-          <Team />
+          {/* <Team /> */}
           <Projects />
           <Testimonials />
           <Blogs />

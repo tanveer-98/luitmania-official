@@ -22,12 +22,12 @@ const TestimonialCard = ({
       />
       <figcaption>
         <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample4.jpg"
+          src={profileImg}
           alt="profile-sample4"
           className="profile"
         />
         <h2>
-          Hans Down<span>Engineer</span>
+          {client_name}<span>{designation}</span>
         </h2>
         <p>
           I'm looking for something that can deliver a 50-pound payload of snow

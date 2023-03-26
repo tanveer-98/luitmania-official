@@ -25,6 +25,7 @@ const Navbar = () => {
       setScrollReached(true);
     } else setScrollReached(false);
   }
+
   window.addEventListener("scroll", check);
 
   // Progress Bar Scroll Animation
@@ -40,47 +41,109 @@ const Navbar = () => {
   }
 
   // window.onscroll = function () {
-    
+
   // };
 
-   // Nav bar active on scroll 
+  // Nav bar active on scroll
 
-   const sections = document.querySelectorAll('section');
-   const navLinks = document.querySelectorAll("nav-link");
-   console.log("NavLinks");
-   console.log(navLinks);
-
-
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav-link");
+  console.log("NavLinks");
+  console.log(navLinks);
 
   window.onscroll = () => {
     progressBar();
-    var current : string | null = "";
+    var current: string | null = "";
 
-    sections.forEach((section)=>{
-      //get section top Pixel 
-      const sectionTop = section.offsetTop; 
-      if(window.scrollY >= sectionTop){
-        current  = section.getAttribute('id')
-
+    sections.forEach((section) => {
+      //get section top Pixel
+      const sectionTop = section.offsetTop;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
       }
-    })
-    // console.log("CURRENT"+ current)
+    });
+    console.log("CURRENT" + current);
     // console.log(navLinks)
-    navLinks.forEach((element)=>{
-      // console.log("LI");
-      // console.log(element)
-      element.classList.remove('nav-link-active');
-      if(current && element.classList.contains(current)){
-          element.classList.add('nav-link-active')
+
+    // const values  = document.getElementsByClassName("nav-link");
+
+    // Array.from(values).forEach((element)=>{
+    //   console.log('NAVLINK')
+    //   console.log(element);
+
+    // })
+
+    navLinks.forEach((element) => {
+      element.classList.remove("nav-link-active");
+      if (current && element.classList.contains(current)) {
+        element.classList.add("nav-link-active");
       }
-    })
-  }
+    });
+  };
 
-  const handleSetActive  = (to:any) =>{
+  const handleSetActive = (to: any) => {
     console.log(to);
-  }
+  };
 
-   return (
+  const onClickHandler = (event: any) => {
+    // const values = document.getElementsByClassName("page-nav-link");
+    // // values.forEach((element)=>{
+    // // this wont work as values is a collection and not an array
+    // // })
+    // // console.log( typeof values)
+    // // console.log(values)
+    // Array.from(values).forEach((element) => {
+    //   console.log(element);
+    //   // if (element.classList.contains("nav-link-active")) {
+    //   element.classList.remove("nav-link-active");
+    //   // }
+    // });
+    // event.target.classList.add("nav-link-active");
+  };
+
+  const onClickLinkHandler = (event: any) => {
+    const values = document.getElementsByClassName("page-nav-link");
+    // values.forEach((element)=>{
+    // this wont work as values is a collection and not an array
+
+    // })
+    // console.log( typeof values)
+    // console.log(values)
+
+
+    
+    Array.from(values).forEach((element) => {
+      console.log(element);
+      // if (element.classList.contains("nav-link-active")) {
+
+    
+      element.classList.remove("nav-link-active");
+      // }
+    });
+
+    event.target.classList.add("nav-link-active");
+  };
+
+  const AllLinks = document.getElementsByClassName("nav-link");
+  console.log("ALL LINKS :");
+  // console.log(AllLinks);
+
+  Array.from(AllLinks).forEach((link) => {
+    
+   
+
+ 
+    link.addEventListener("click", () => {
+       // remove active status from all links
+      Array.from(AllLinks).forEach((links) => {
+        links.classList.remove('nav-link-active');
+       });
+          // add active status to one link 
+      link.classList.add("nav-link-active");
+    });
+  });
+
+  return (
     <nav
       className={`fixed py-2 left-0 top-0 backdrop-blur-lg  transition-all duration-300 ease-linear z-20 ${
         scrollReached ? "bg-bodyColorMain" : "bg-transparent"
@@ -95,7 +158,7 @@ const Navbar = () => {
             src={L}
             alt=""
             id="logo"
-            className="w-[200px] "
+            className="w-[200px]"
           /> */}
           <h2 className=" logo text-white ml-6 tracking-widest text-3xl text-center">
             LuitoMania
@@ -107,57 +170,62 @@ const Navbar = () => {
             scrollReached ? "text-white" : "text-grayishBlue"
           } md:flex`}
         >
-          <Link
-            to="Ahero"
-            smooth={true}
-            offset={0}
-            className=" nav-link tracking-tight hover:text-gray-400  cursor-pointer"
-            activeClass = "bg-white"
-            activeStyle={{
-              backgroundColor : "white"
-            }}
-          >
-            Home
-          </Link>
-          <Link
-            to="services"
-            smooth={true}
-            offset={-120}
-            className="   tracking-tight hover:text-gray-400 cursor-pointer"
-            activeClass = "nav-link-active"
-            activeStyle ={{
-              backgroundColor : "white",
-              color : 'red'
-            }}
-           
-          >
-            Services
-          </Link>
-          <Link
-            to="aboutus"
-            smooth={true}
-            offset={-120}
-            className="  nav-link tracking-tight hover:text-gray-400 cursor-pointer"
-          >
-            About us
-          </Link>
-          <Link
-            to="projects"
-            smooth={true}
-            offset={-120}
-            className="  nav-link tracking-tight hover:text-gray-400 cursor-pointer"
-          >
-            Projects
-          </Link>
-          <Link
-            to="faq"
-            smooth={true}
-            offset={-120}
-            className=" nav-link  tracking-tight hover:text-gray-400 cursor-pointer"
-          >
-            FAQ
-          </Link>
           <div>
+            <Link
+              to="Ahero"
+              smooth={true}
+              offset={0}
+              className="nav-link nav-link-active tracking-tight hover:text-gray-100 cursor-pointer"
+            >
+              Home
+            </Link>
+          </div>
+
+          <div onClick={(e) => onClickHandler(e)}>
+            <Link
+              to="services"
+              smooth={true}
+              offset={-120}
+              className="nav-link tracking-tight hover:text-gray-400 cursor-pointer"
+            >
+              Services
+            </Link>
+          </div>
+
+          <div onClick={(e) => onClickHandler(e)}>
+            <Link
+              to="aboutus"
+              smooth={true}
+              offset={-120}
+              className="  nav-link tracking-tight hover:text-gray-400 cursor-pointer"
+            >
+              About us
+            </Link>
+          </div>
+
+          <div onClick={(e) => onClickHandler(e)}>
+            <Link
+              to="projects"
+              smooth={true}
+              offset={-120}
+              className="  nav-link tracking-tight hover:text-gray-400 cursor-pointer"
+            >
+              Projects
+            </Link>
+          </div>
+
+          <div onClick={(e) => onClickHandler(e)}>
+            <Link
+              to="faq"
+              smooth={true}
+              offset={-120}
+              className=" nav-link  tracking-tight hover:text-gray-400 cursor-pointer"
+            >
+              FAQ
+            </Link>
+          </div>
+
+          <div onClick={(e) => onClickHandler(e)}>
             <Link
               to="newsletter"
               smooth={true}
@@ -300,10 +368,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div
-        id="pbar"
-        className="relative mb-6 h-1 w-0 bg-green-500 "
-      >
+      <div id="pbar" className="relative mb-6 h-1 w-0 bg-green-500 ">
         {/* <div className="h-1 bg-green-500" style={{ width: "50%" }}></div> */}
       </div>
     </nav>

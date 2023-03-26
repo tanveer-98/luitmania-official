@@ -25,7 +25,7 @@ const MultiCarousel = ({children  , data}:any) => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -43,12 +43,8 @@ const MultiCarousel = ({children  , data}:any) => {
     showDots={true}
     containerClass="w-[300px] md:w-[80%] h-full relative z-3 bg-transparent "
     className="bg-transparent"
-    
-    >
-     
-      
+    > 
       {children}
-     
     </Carousel>
     // </div>
   );

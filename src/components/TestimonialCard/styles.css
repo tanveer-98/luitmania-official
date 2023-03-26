@@ -15,8 +15,8 @@
   ); */
   background: rgba(0, 0, 0, 0.25);
   box-shadow: inset 10px 10px 40px  rgba(255,255, 255, 0.5);
-  backdrop-filter: blur(9.5px);
   -webkit-backdrop-filter: blur(16.5px);
+  backdrop-filter: blur(9.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -27,10 +27,11 @@
     position: absolute;
     top : 80%;
     left: 10%;
-    background-color: white;
     z-index: 0;
     opacity: 60%;
-    /* backdrop-filter: blur(16px) */
+    background-color: linear-gradient(to bottom , 
+    #fa39ad 40% , #fe6c4c 50%);
+    filter: blur(100px);
 }
 
 
