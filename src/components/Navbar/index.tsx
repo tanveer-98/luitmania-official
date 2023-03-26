@@ -47,13 +47,14 @@ const Navbar = () => {
   // Nav bar active on scroll
 
   const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav-link");
-  console.log("NavLinks");
-  console.log(navLinks);
+  const navLinks = document.getElementsByClassName("nav-link");
+  // console.log("NavLinks");
+  // console.log(navLinks);
 
   window.onscroll = () => {
     progressBar();
     var current: string | null = "";
+    let prev = "Ahero"
 
     sections.forEach((section) => {
       //get section top Pixel
@@ -62,7 +63,9 @@ const Navbar = () => {
         current = section.getAttribute("id");
       }
     });
-    console.log("CURRENT" + current);
+
+   
+    // console.log("CURRENT" + current);
     // console.log(navLinks)
 
     // const values  = document.getElementsByClassName("nav-link");
@@ -73,12 +76,31 @@ const Navbar = () => {
 
     // })
 
-    navLinks.forEach((element) => {
-      element.classList.remove("nav-link-active");
-      if (current && element.classList.contains(current)) {
-        element.classList.add("nav-link-active");
-      }
-    });
+    // navLinks.forEach((element) => {
+    //   console.log(element)
+    //   if(current)
+    //   console.log(element.classList.contains(current));
+
+    //   element.classList.remove("nav-link-active");
+    //   if (current && element.classList.contains(current)) {
+    //     // console.log("YES FOUND ")
+    //     element.classList.add("nav-link-active");
+    //   }
+    // });
+
+
+    // remove active from other elemnet s
+
+    // console.log(navLinks)
+    Array.from(navLinks).forEach(navlink=>{
+      navlink.classList.remove("nav-link-active");
+    })
+    
+
+    const currentNavLink = document.getElementsByClassName(current);
+    // console.log(currentNavLink)
+    if(Array.from(currentNavLink)[0])
+    Array.from(currentNavLink)[0].classList.add('nav-link-active');
   };
 
   const handleSetActive = (to: any) => {
@@ -102,26 +124,25 @@ const Navbar = () => {
   };
 
   const onClickLinkHandler = (event: any) => {
-    const values = document.getElementsByClassName("page-nav-link");
-    // values.forEach((element)=>{
-    // this wont work as values is a collection and not an array
+    // const values = document.getElementsByClassName("page-nav-link");
+    // // values.forEach((element)=>{
+    // // this wont work as values is a collection and not an array
 
-    // })
-    // console.log( typeof values)
-    // console.log(values)
+    // // })
+    // // console.log( typeof values)
+    // // console.log(values)
 
-
-    
-    Array.from(values).forEach((element) => {
-      console.log(element);
-      // if (element.classList.contains("nav-link-active")) {
 
     
-      element.classList.remove("nav-link-active");
-      // }
-    });
+    // Array.from(values).forEach((element) => {
+    //   console.log(element);
+    //   // if (element.classList.contains("nav-link-active")) {
+        
+    //   element.classList.remove("nav-link-active");
+    //   // }
+    // });
 
-    event.target.classList.add("nav-link-active");
+    // event.target.classList.add("nav-link-active");
   };
 
   const AllLinks = document.getElementsByClassName("nav-link");
@@ -129,10 +150,6 @@ const Navbar = () => {
   // console.log(AllLinks);
 
   Array.from(AllLinks).forEach((link) => {
-    
-   
-
- 
     link.addEventListener("click", () => {
        // remove active status from all links
       Array.from(AllLinks).forEach((links) => {
@@ -175,7 +192,7 @@ const Navbar = () => {
               to="Ahero"
               smooth={true}
               offset={0}
-              className="nav-link nav-link-active tracking-tight hover:text-gray-100 cursor-pointer"
+              className="nav-link Ahero nav-link-active tracking-tight hover:text-gray-100 cursor-pointer"
             >
               Home
             </Link>
@@ -186,7 +203,7 @@ const Navbar = () => {
               to="services"
               smooth={true}
               offset={-120}
-              className="nav-link tracking-tight hover:text-gray-400 cursor-pointer"
+              className="nav-link services tracking-tight hover:text-gray-400 cursor-pointer"
             >
               Services
             </Link>
@@ -197,7 +214,7 @@ const Navbar = () => {
               to="aboutus"
               smooth={true}
               offset={-120}
-              className="  nav-link tracking-tight hover:text-gray-400 cursor-pointer"
+              className="nav-link aboutus tracking-tight hover:text-gray-400 cursor-pointer"
             >
               About us
             </Link>
@@ -208,7 +225,7 @@ const Navbar = () => {
               to="projects"
               smooth={true}
               offset={-120}
-              className="  nav-link tracking-tight hover:text-gray-400 cursor-pointer"
+              className="  nav-link projects tracking-tight hover:text-gray-400 cursor-pointer"
             >
               Projects
             </Link>
@@ -219,7 +236,7 @@ const Navbar = () => {
               to="faq"
               smooth={true}
               offset={-120}
-              className=" nav-link  tracking-tight hover:text-gray-400 cursor-pointer"
+              className=" nav-link faq  tracking-tight hover:text-gray-400 cursor-pointer"
             >
               FAQ
             </Link>
@@ -230,7 +247,7 @@ const Navbar = () => {
               to="newsletter"
               smooth={true}
               offset={-120}
-              className="  nav-link tracking-tight  hover:text-gray-400 cursor-pointer"
+              className="  nav-link newsletter tracking-tight  hover:text-gray-400 cursor-pointer"
             >
               NewsLetter
             </Link>
@@ -240,7 +257,7 @@ const Navbar = () => {
               to="contactus"
               smooth={true}
               offset={-80}
-              className=" nav-link tracking-tight hover:text-gray-400 cursor-pointer"
+              className=" nav-link contactus tracking-tight hover:text-gray-400 cursor-pointer"
             >
               Contact Us
             </Link>
