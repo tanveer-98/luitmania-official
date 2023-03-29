@@ -59,7 +59,7 @@ const Navbar = () => {
     sections.forEach((section) => {
       //get section top Pixel
       const sectionTop = section.offsetTop;
-      if (window.scrollY >= sectionTop) {
+      if (window.scrollY >= sectionTop-140) {
         current = section.getAttribute("id");
       }
     });
@@ -177,7 +177,7 @@ const Navbar = () => {
             id="logo"
             className="w-[200px]"
           /> */}
-          <h2 className=" logo text-white ml-6 tracking-widest text-3xl text-center">
+          <h2 className="logo text-white ml-6 tracking-widest text-3xl text-center">
             LuitoMania
           </h2>
         </div>
@@ -306,11 +306,11 @@ const Navbar = () => {
       >
         <div className="mobile-nav-link w-full py-3 text-left pl-2  font-bold">
           <Link
-            to="hero"
+            to="Ahero"
             smooth={true}
             offset={-120}
             onClick={toggleHam}
-            className="  tracking-tight "
+            className="tracking-tight"
           >
             Home
           </Link>
@@ -321,7 +321,7 @@ const Navbar = () => {
             smooth={true}
             onClick={toggleHam}
             offset={-120}
-            className=" tracking-tight "
+            className="tracking-tight"
           >
             Services
           </Link>
@@ -379,7 +379,7 @@ const Navbar = () => {
             onClick={toggleHam}
             smooth={true}
             offset={-120}
-            className="  tracking-tight "
+            className="tracking-tight "
           >
             Contact Us
           </Link>

@@ -126,13 +126,13 @@ const Projects = () => {
     <section id="projects" className="py-16 bg-bgcolormain ">
 
       <Heading
-        styles="mb-2 uppercase title text-white font-bold  text-2xl text-center md:text-3xl"
+        styles="font-roboto mb-2 uppercase title text-white font-bold   text-4xl text-center md:text-5xl"
         content="Our Projects"
       />
 
       <Heading
-        styles=" px-10 sub-title mb-6 text-gray-400 text-xl text-center md:text-xl"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        styles="px-10 block font-bold  sub-title mb-6 text-gray-500 text-[16px] text-center md:text-[16px]"
+        content="Successfully Delivering Results: A Portfolio of Our Completed Projects"
       />
 
       {/* Boxes Container For Web*/}

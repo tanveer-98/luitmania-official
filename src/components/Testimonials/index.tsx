@@ -72,7 +72,7 @@ const Testimonials = () => {
                 client_name={element.client_name}
                 designation={element.designation}
                 content={element.content}
-              />
+              /> 
             </div>
           ))}
         </MultiCarousel>
@@ -88,8 +88,8 @@ const Testimonials = () => {
       />
 
       <Heading
-        styles=" px-10 block sub-title mb-6 text-[color:var(--main-text-color)] text-xl text-center md:text-[16px]"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        styles=" px-10 block sub-title mb-6 text-gray-500 text-[16px] text-center md:text-[16px]"
+        content="Hear What Our Valued Customers Have to Say: Heartfelt Testimonials on Our Exceptional Service, Quality Products, and Unmatched Customer Satisfaction."
       />
 
       {/* <div className="flex flex-row flex-wrap justify-center items-center">
