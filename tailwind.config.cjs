@@ -20,7 +20,8 @@ module.exports = {
       abril: ["Abril Fatface", "cursive"],
       raleway : ['Raleway', "sans-serif"],
       poppins : ['Poppins', "sans-serif"],
-      roboto  : ['Roboto',"sans-serif"]
+      roboto  : ['Roboto',"sans-serif"],
+      
       
       
     },

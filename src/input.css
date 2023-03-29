@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 /* *,
 ::before,
 ::after {
@@ -26,7 +29,7 @@ font-family: 'Varela Round', sans-serif;
 
    @font-face{
     font-family: Agustina_400;
-    src: url('Agutina400.woff2');
+    src: url('/Agutina400.woff2');
   }
 @font-face{
   font-family: Rosmatica;
@@ -36,8 +39,11 @@ font-family: 'Varela Round', sans-serif;
   font-family: Agustina;
   src: url('/AgustinaDemo.ttf');
 }
-.logo{
-  font-family: 'Agustina_400','sans-serif';
+@layer{
+  .logo{
+    font-family: 'Agustina_400','sans-serif';
+  }
+
 }
 
 :root{
