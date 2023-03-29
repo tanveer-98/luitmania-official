@@ -53,7 +53,7 @@ const Navbar = () => {
 
   window.onscroll = () => {
     progressBar();
-    var current: string | null = "";
+    var current: string | null = "Ahero";
     let prev = "Ahero"
 
     sections.forEach((section) => {
@@ -98,7 +98,9 @@ const Navbar = () => {
     
 
     const currentNavLink = document.getElementsByClassName(current);
-    // console.log(currentNavLink)
+
+    console.log(" Current nav link :")
+    console.log(current)
     if(Array.from(currentNavLink)[0])
     Array.from(currentNavLink)[0].classList.add('nav-link-active');
   };
