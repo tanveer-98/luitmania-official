@@ -28,7 +28,7 @@ const AnimatedHero = () => {
             
             <div>
 
-            <h2 className="font-bold text-center md:text-left  text-2xl md:text-5xl">
+            <h2 className="font-bold bg-clip-text text-transparent bg-gradient-mainheading text-center md:text-left  text-2xl md:text-5xl">
           Bringing Your Technological Needs at Affordable Price
 
             </h2>

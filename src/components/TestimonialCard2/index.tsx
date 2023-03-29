@@ -30,8 +30,7 @@ const TestimonialCard = ({
           {client_name}<span>{designation}</span>
         </h2>
         <p>
-          I'm looking for something that can deliver a 50-pound payload of snow
-          on a small feminine target. Can you suggest something? Hello...?
+        {content}
         </p>
         <a href="#" className="follow">
           Follow

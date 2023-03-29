@@ -21,7 +21,7 @@ module.exports = {
       raleway : ['Raleway', "sans-serif"],
       poppins : ['Poppins', "sans-serif"],
       roboto  : ['Roboto',"sans-serif"],
-      
+
       
       
     },
@@ -42,7 +42,7 @@ module.exports = {
         dots: "url('/bg-dots.svg')",
         heroBg: "url('/background.jpg')",
         newsLetterBg: "url('/background2.jpg')",
-        "gradient-aboutus": "linear-gradient(180deg, #fff 0%, #292929 20%)",
+        "gradient-mainheading": "linear-gradient(90deg, yellow 0%,  yellowgreen 70%)",
         "gradient-footer" : "linear-gradient(180deg , #3c3c3c  0% , #383838 100%)"
       },
       spacing: {

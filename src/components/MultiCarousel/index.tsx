@@ -33,7 +33,7 @@ const MultiCarousel = ({children  , data}:any) => {
     },
   };
   const styles = {
-    carousal_container:"flex justify-center items-center my-12"
+    carousal_container:"flex justify-center items-center my-12 mx-10"
   }
   // console.log("data" + data)
   return (
