@@ -8,7 +8,7 @@
     "devMain": "vite --mode=maintenance",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "prod": "vite"
+    "prod": "vite"sdfsd
   },
   "dependencies": {
     "@types/node": "^18.14.1",
